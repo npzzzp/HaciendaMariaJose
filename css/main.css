@@ -695,13 +695,22 @@ h3 {
 }
 
 .nature {
-  background: linear-gradient(180deg, var(--green-100) 0%, var(--green-200) 100%);
+  background: linear-gradient(180deg, #3d6b3f 0%, var(--green-700) 100%);
   overflow: hidden;
+  color: var(--cream-2);
 }
 
 .nature-header {
   margin-bottom: 44px;
   max-width: 850px;
+}
+
+.nature-header h2 {
+  color: var(--cream-2);
+}
+
+.nature-header p {
+  color: rgba(255, 250, 240, 0.85);
 }
 
 .nature-panorama {
@@ -812,6 +821,8 @@ h3 {
 }
 
 .nature-point {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
   padding: 26px;
 }
 
@@ -936,7 +947,7 @@ h3 {
 }
 
 .experiences {
-  background: linear-gradient(135deg, rgba(240, 199, 106, 0.15) 0%, var(--cream-2) 100%);
+  background: var(--white);
 }
 
 .experience-grid {
@@ -1043,7 +1054,7 @@ h3 {
 }
 
 .gallery {
-  background: linear-gradient(180deg, var(--green-200) 0%, var(--green-100) 100%);
+  background: var(--cream);
 }
 
 .gallery-grid {
@@ -1147,7 +1158,7 @@ h3 {
 }
 
 .products {
-  background: linear-gradient(135deg, rgba(219, 233, 200, 0.4) 0%, var(--cream) 100%);
+  background: linear-gradient(135deg, var(--cream) 0%, #fef8e8 100%);
 }
 
 .products-grid {
