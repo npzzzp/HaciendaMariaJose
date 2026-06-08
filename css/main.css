@@ -695,9 +695,8 @@ h3 {
 }
 
 .nature {
-  background: linear-gradient(180deg, #3d6b3f 0%, var(--green-700) 100%);
+  background: linear-gradient(180deg, var(--cream) 0%, #faf5ed 100%);
   overflow: hidden;
-  color: var(--cream-2);
 }
 
 .nature-header {
@@ -706,11 +705,11 @@ h3 {
 }
 
 .nature-header h2 {
-  color: var(--cream-2);
+  color: var(--ink);
 }
 
 .nature-header p {
-  color: rgba(255, 250, 240, 0.85);
+  color: var(--muted);
 }
 
 .nature-panorama {
@@ -821,8 +820,8 @@ h3 {
 }
 
 .nature-point {
-  background: rgba(255, 255, 255, 0.95);
-  border: none;
+  background: var(--white);
+  border: 1px solid var(--line);
   padding: 26px;
 }
 
@@ -947,7 +946,7 @@ h3 {
 }
 
 .experiences {
-  background: var(--white);
+  background: var(--cream-2);
 }
 
 .experience-grid {
@@ -1158,7 +1157,7 @@ h3 {
 }
 
 .products {
-  background: linear-gradient(135deg, var(--cream) 0%, #fef8e8 100%);
+  background: var(--cream-2);
 }
 
 .products-grid {
