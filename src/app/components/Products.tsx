@@ -4,37 +4,37 @@ import { motion, useInView } from "motion/react";
 const galleryItems = [
   {
     id: 1,
-    label: "Gente y campo",
-    caption: "La vida diaria de la finca y el trabajo que sostiene el sabor.",
-    image: "/assets/photos/4987818660302883935.jpg",
+    label: "Producción de leche",
+    caption: "Campesinos y familias de la zona aportando leche fresca cada mañana.",
+    image: "/assets/photos/IMG-20260608-WA0047.jpg",
     span: "row-span-2",
   },
   {
     id: 2,
-    label: "Lugar detrás del sabor",
-    caption: "Los paisajes y espacios donde nace nuestra leche y nuestro queso.",
+    label: "Trabajo en campo",
+    caption: "La gente y el lugar detrás del sabor de nuestra finca.",
     image: "/assets/photos/4987818660302883936.jpg",
     span: "",
   },
   {
     id: 3,
-    label: "Praderas y ganado",
-    caption: "El entorno natural que alimenta el bienestar de nuestras vacas.",
-    image: "/assets/photos/4987818660302883934.jpg",
+    label: "Equipo local",
+    caption: "Hombres y mujeres que hacen posible la producción diaria.",
+    image: "/assets/photos/IMG-20260608-WA0050.jpg",
     span: "",
   },
   {
     id: 4,
-    label: "Trabajo en finca",
-    caption: "La dedicación de cada jornada en el cuidado de la leche y el campo.",
-    image: "/assets/photos/4987818660302883933.jpg",
+    label: "Proveedor de leche",
+    caption: "Familias campesinas que confían en Hacienda Maria Jose.",
+    image: "/assets/photos/IMG-20260608-WA0053.jpg",
     span: "",
   },
   {
     id: 5,
     label: "Sabor de la tierra",
-    caption: "Un vistazo al entorno que da identidad a nuestra producción.",
-    image: "/assets/photos/4987818660302883932.jpg",
+    caption: "Un vistazo al entorno y la vida del campo que da identidad a nuestra producción.",
+    image: "/assets/photos/4987818660302883935.jpg",
     span: "",
   },
 ];
@@ -67,45 +67,23 @@ export function Products() {
           </h2>
         </motion.div>
 
-        {/* Two pillars */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
-          {[
-            {
-              emoji: "🧀",
-              title: "Quesos Artesanales",
-              desc: "Elaboramos quesos frescos y maduros usando leche recién ordeñada y recetas transmitidas de generación en generación. Sin conservantes, sin colorantes, solo el sabor verdadero del campo.",
-              bg: "#fff8ee",
-              border: "#e8dfc8",
-            },
-            {
-              emoji: "🥛",
-              title: "Leche Fresca",
-              desc: "Nuestra leche entera llega directamente desde la ordeña matutina, pasteurizada en finca el mismo día. Cremosa, natural y con todo el valor nutricional intacto.",
-              bg: "#edf4ff",
-              border: "#c8d8f0",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-              className="rounded-2xl p-8 border"
-              style={{ background: item.bg, borderColor: item.border }}
-            >
-              <span style={{ fontSize: "2.5rem" }}>{item.emoji}</span>
-              <h3
-                className="text-[#2c1f0e] mt-4 mb-3"
-                style={{ fontFamily: "Georgia, serif", fontSize: "1.3rem" }}
-              >
-                {item.title}
-              </h3>
-              <p className="text-[#7a6b52]" style={{ lineHeight: 1.8 }}>
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        {/* Intro copy */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mx-auto mb-16 max-w-3xl rounded-3xl border border-[#e8dfc8] bg-[#fff8ee] p-8 text-center shadow-sm"
+        >
+          <h3
+            className="text-[#2c1f0e] mb-3"
+            style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.3rem, 3vw, 2rem)" }}
+          >
+            Producción de queso y leche, con el corazón de la finca
+          </h3>
+          <p className="text-[#7a6b52]" style={{ lineHeight: 1.8 }}>
+            En Hacienda Maria Jose trabajamos la leche y el queso como centro de nuestra producción familiar, con dedicación diaria y un enfoque cercano a la gente y al campo.
+          </p>
+        </motion.div>
 
         {/* Section title for gallery */}
         <motion.div

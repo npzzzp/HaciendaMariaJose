@@ -2,7 +2,6 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Products } from "./components/Products";
-import { Process } from "./components/Process";
 import { Contact } from "./components/Contact";
 
 export default function App() {
@@ -12,7 +11,6 @@ export default function App() {
       <Hero />
       <About />
       <Products />
-      <Process />
       <Contact />
     </div>
   );

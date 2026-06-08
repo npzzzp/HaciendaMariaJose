@@ -110,27 +110,6 @@ export function Hero() {
           </button>
         </motion.div>
 
-        {/* Stats strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.85 }}
-          className="mt-16 flex flex-wrap justify-center gap-10"
-        >
-          {[
-            { value: "3", label: "Generaciones" },
-            { value: "12+", label: "Variedades de Queso" },
-            { value: "100%", label: "Leche Natural" },
-            { value: "50ha", label: "de Praderas Verdes" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p className="text-white" style={{ fontSize: "2rem", fontWeight: 700, fontFamily: "Georgia, serif" }}>
-                {stat.value}
-              </p>
-              <p className="text-white/70 text-sm tracking-wide">{stat.label}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Scroll indicator */}

@@ -1,27 +1,22 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Leaf, Heart, Sun, Award } from "lucide-react";
+import { Heart, ShieldCheck, HandHeart } from "lucide-react";
 
 const values = [
   {
-    icon: <Leaf size={22} />,
-    title: "Pastoreo Natural",
-    desc: "Nuestras vacas se alimentan libremente en praderas sin pesticidas durante todo el año.",
-  },
-  {
     icon: <Heart size={22} />,
-    title: "Tradición Familiar",
-    desc: "Tres generaciones perfeccionando recetas transmitidas con amor y dedicación.",
+    title: "Producción Familiar",
+    desc: "Todo se hace con dedicación, cuidado y trabajo diario en la finca, como en casa.",
   },
   {
-    icon: <Sun size={22} />,
-    title: "Sin Aditivos",
-    desc: "Cero conservantes, cero colorantes. Solo leche fresca, sal y cultivos naturales.",
+    icon: <HandHeart size={22} />,
+    title: "Leche y Queso de Finca",
+    desc: "La base de nuestra producción es la leche fresca y el queso artesanal de origen local.",
   },
   {
-    icon: <Award size={22} />,
-    title: "Calidad Certificada",
-    desc: "Procesos artesanales con estándares de higiene y calidad de exportación.",
+    icon: <ShieldCheck size={22} />,
+    title: "Proceso Responsable",
+    desc: "Cuidamos la higiene, la calidad y el bienestar de la producción sin exagerar el lenguaje comercial.",
   },
 ];
 
@@ -69,14 +64,14 @@ export function About() {
               className="absolute -bottom-6 -right-6 z-20 bg-[#fff8ee] rounded-2xl shadow-xl p-5 border border-[#e8dfc8]"
             >
               <p className="text-[#3a5e2f]" style={{ fontFamily: "Georgia, serif", fontSize: "2rem", fontWeight: 700 }}>
-                1974
+                Campo de la Cruz
               </p>
-              <p className="text-[#7a6b52] text-sm">Fundada por la familia Restrepo</p>
+              <p className="text-[#7a6b52] text-sm">Producción familiar en la finca</p>
             </motion.div>
             {/* Small accent image */}
             <div className="absolute -top-6 -left-6 w-32 h-32 rounded-xl overflow-hidden shadow-lg border-4 border-[#faf7f0] z-20">
               <img
-                src="/assets/photos/IMG-20260608-WA0065.jpg"
+                src="/assets/photos/4987818660302883932.jpg"
                 alt="Detalle decorativo de la finca"
                 className="w-full h-full object-cover"
               />
@@ -93,26 +88,24 @@ export function About() {
               className="text-[#7a6b52] mb-6"
               style={{ fontSize: "1.05rem", lineHeight: 1.8 }}
             >
-              Nuestra historia nace en Hacienda Maria Jose, donde cada mañana
-              comienza con el ordeño directo y la dedicación al cuidado del ganado.
-              Aquí el trabajo en la finca se hace con respeto por la tierra y por
-              las familias que aportan la leche.
+              Nuestra historia nace en Hacienda Maria Jose, ubicada en Campo de la Cruz.
+              Allí, cada mañana comienza con el ordeño directo y el cuidado del ganado,
+              en un trabajo familiar que se realiza con dedicación y respeto por la tierra.
             </p>
             <p
               className="text-[#7a6b52] mb-8"
               style={{ fontSize: "1.05rem", lineHeight: 1.8 }}
             >
-              Cada mañana, antes del amanecer, comienza la ordeña manual. La leche
-              viaja pocos metros hasta la quesería donde nuestros maestros
-              queseros la transforman en quesos únicos que reflejan el terroir de
-              nuestras tierras andinas.
+              El trabajo en la finca se desarrolla de forma cercana y constante.
+              La leche se recoge y se transforma en queso artesanal con cuidado,
+              manteniendo el valor de una producción familiar y auténtica.
             </p>
             <div className="flex gap-4 flex-wrap">
               <div className="px-5 py-3 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] text-sm">
-                🐄 Ganado Holstein & Normando
+                Leche fresca y queso artesanal
               </div>
               <div className="px-5 py-3 rounded-full bg-[#c8a96e]/15 text-[#7a6b52] text-sm">
-                🏔️ 2.400 m.s.n.m.
+                Producción familiar en Campo de la Cruz
               </div>
             </div>
           </motion.div>
