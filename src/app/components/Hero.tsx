@@ -47,15 +47,15 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-16 md:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-5 py-2 mb-8"
         >
-          <span className="text-sm text-white/90 tracking-widest uppercase">
-            🌿 Desde los Andes · 100% Natural
+          <span className="text-sm text-white/90 tracking-[0.18em] uppercase">
+            🌿 Leche y queso de finca
           </span>
         </motion.div>
 
@@ -63,12 +63,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="text-white mb-6"
+          className="text-white mb-6 tracking-[-0.02em]"
           style={{
             fontFamily: "Georgia, serif",
-            fontSize: "clamp(2.5rem, 6vw, 5rem)",
+            fontSize: "clamp(2.25rem, 5.5vw, 4.75rem)",
             fontWeight: 700,
-            lineHeight: 1.15,
+            lineHeight: 1.12,
+            letterSpacing: "-0.02em",
           }}
         >
           Hacienda <em>Maria Jose</em><br />

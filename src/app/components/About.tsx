@@ -57,8 +57,8 @@ export function About() {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <img
-                src="/assets/photos/IMG-20260608-WA0065.jpg"
-                alt="Detalle de la finca"
+                src="/assets/photos/IMG-20260608-WA0064.jpg"
+                alt="Vista principal de la finca"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -76,7 +76,7 @@ export function About() {
             {/* Small accent image */}
             <div className="absolute -top-6 -left-6 w-32 h-32 rounded-xl overflow-hidden shadow-lg border-4 border-[#faf7f0] z-20">
               <img
-                src="/assets/photos/IMG-20260608-WA0064.jpg"
+                src="/assets/photos/IMG-20260608-WA0065.jpg"
                 alt="Detalle decorativo de la finca"
                 className="w-full h-full object-cover"
               />
