@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hacienda Maria Jose, leche fresca y queso artesanal directamente de la hacienda. Producci√≥n familiar con comunicaci√≥n directa y enfoque en calidad.">
-  <title>Hacienda Maria Jose | Leche y queso de finca</title>
+  <meta name="description" content="Hacienda Maria Jose: leche fresca y quesos artesanales de finca familiar. Descubre nuestra producciÛn natural y pide directamente por WhatsApp.">
+  <title>Hacienda Maria Jose | Leche y Queso Artesanal</title>
   <link rel="icon" type="image/svg+xml" href="./assets/logo/Logo_FincaMJ.svg">
   <link rel="shortcut icon" href="./assets/logo/Logo_FincaMJ.svg">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/responsive.css">
@@ -20,278 +18,184 @@
   <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="site-header" data-header>
-    <nav class="nav container" aria-label="Navegacion principal">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-mark"><img src="./assets/logo/Logo_FincaMJ.svg" alt="" aria-hidden="true"></span>
+    <nav class="nav container" aria-label="NavegaciÛn principal">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark"><img src="./assets/logo/Logo_FincaMJ.svg" alt="Hacienda Maria Jose logo"></span>
         <span>Hacienda <em>Maria Jose</em></span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="Abrir men˙" aria-expanded="false" data-nav-toggle>
+        <span></span>
         <span></span>
         <span></span>
       </button>
 
       <div class="nav-menu" data-nav-menu>
-        <a href="#experiencia">Nosotros</a>
-        <a href="#naturaleza">Producci√≥n</a>
-        <a href="#recorrido">Proceso</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#productos">Productos</a>
+        <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
       </div>
 
-      <a class="nav-cta" href="#contacto">Reservar visita</a>
+      <a class="nav-cta" href="#contacto">Pedir por WhatsApp</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="hero-scene" aria-hidden="true">
-        <div class="sky"></div>
-        <div class="sun"></div>
-        <div class="cloud cloud-one"></div>
-        <div class="cloud cloud-two"></div>
-        <div class="mountains mountains-back"></div>
-        <div class="mountains mountains-front"></div>
-        <div class="hill hill-one"></div>
-        <div class="hill hill-two"></div>
-        <div class="pasture"></div>
-        <div class="fence"></div>
-        <div class="cow cow-one">
-          <span></span>
+      <div class="hero-overlay"></div>
+      <div class="hero-copy container reveal">
+        <div class="hero-brand">
+          <span class="brand-mark hero-mark"><img src="./assets/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose"></span>
+          <div>
+            <p class="hero-brand-title">Hacienda <em>Maria Jose</em></p>
+            <p class="hero-brand-subtitle">Quesos y leche de finca</p>
+          </div>
         </div>
-        <div class="cow cow-two">
-          <span></span>
-        </div>
-        <div class="grass-field">
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-      </div>
-
-      <div class="floating-leaves" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-
-      <div class="hero-content container reveal">
-        <p class="eyebrow">Leche y queso de campo</p>
-        <h1>Hacienda <em>Maria Jose</em></h1>
-        <p class="hero-copy">
-          Producci√≥n de leche fresca y queso artesanal con cuidado familiar, desde el orde√±o hasta la mesa.
+        <h1>Del pasto a tu mesa, con sabor de finca y tradiciÛn familiar.</h1>
+        <p class="hero-text">
+          En Hacienda Maria Jose producimos leche fresca y quesos artesanales con cuidado cotidiano, procesos claros y comunicaciÛn directa para tus pedidos.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#naturaleza">Ver producci√≥n</a>
-          <a class="btn btn-quiet" href="#experiencia">Sobre nosotros</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="sensory-strip" aria-label="Sensaciones de la finca">
-      <div class="marquee">
-        <span>Leche fresca cada d√≠a</span>
-        <span>Proceso artesanal</span>
-        <span>Cuidado del reba√±o</span>
-        <span>Queso de campo</span>
-        <span>Tradici√≥n familiar</span>
-        <span>Comunicaci√≥n directa</span>
-        <span>Leche fresca cada d√≠a</span>
-        <span>Queso de campo</span>
-      </div>
-    </section>
-
-    <section class="intro section" id="experiencia">
-      <div class="container intro-grid">
-        <div class="intro-copy reveal">
-          <p class="section-kicker">Qui√©nes somos</p>
-          <h2>Familia dedicada a la producci√≥n de leche y queso.</h2>
-          <p>
-            Nuestra finca combina tradici√≥n y cuidado responsable para producir leche fresca y quesos artesanales. Cada paso se hace cerca del ganado, con claridad en el proceso y compromiso con la calidad.
-          </p>
+          <a class="btn btn-primary" href="#productos">Ver productos</a>
+          <a class="btn btn-secondary" href="#nosotros">Conocer la finca</a>
         </div>
 
-        <div class="sense-board reveal" data-reveal-delay="120" aria-label="Detalles de la producci√≥n">
-          <article>
-            <span>01</span>
-            <h3>Leche fresca</h3>
-            <p>Orde√±amos cada ma√±ana para conservar el sabor de la leche de campo desde el primer instante.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Producci√≥n responsable</h3>
-            <p>Cuidamos al ganado y al ambiente con pr√°cticas sostenibles y procesos transparentes.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Queso artesanal</h3>
-            <p>Elaboramos quesos peque√±os y naturales, con textura y aroma que hablan de la finca.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="nature section" id="naturaleza">
-      <div class="container nature-header reveal">
-        <p class="section-kicker">Producci√≥n</p>
-        <h2>Leche de calidad, queso natural.</h2>
-      </div>
-
-      <div class="nature-panorama" data-panorama aria-label="Panorama ilustrado de la hacienda">
-        <div class="panorama-sky"></div>
-        <div class="panorama-ridge ridge-one"></div>
-        <div class="panorama-ridge ridge-two"></div>
-        <div class="panorama-meadow"></div>
-        <div class="stream"></div>
-        <div class="tree tree-left"></div>
-        <div class="tree tree-right"></div>
-        <div class="trail"></div>
-      </div>
-
-      <div class="container nature-grid">
-        <article class="nature-point reveal">
-          <span>Ganado sano</span>
-          <p>Vacas bien cuidadas que reciben alimentaci√≥n natural para producir leche de mejor sabor y frescura.</p>
-        </article>
-        <article class="nature-point reveal" data-reveal-delay="90">
-          <span>Proceso transparente</span>
-          <p>Cada etapa del orde√±o y la elaboraci√≥n se realiza con seguimiento cercano y respeto por la tradici√≥n.</p>
-        </article>
-        <article class="nature-point reveal" data-reveal-delay="180">
-          <span>Calidad constante</span>
-          <p>La leche y el queso se controlan en cada paso para asegurar un producto limpio y sabroso.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="route section" id="recorrido">
-      <div class="container route-grid">
-        <div class="route-copy reveal">
-          <p class="section-kicker">Proceso</p>
-          <h2>C√≥mo convertimos la leche en productos de finca.</h2>
-          <p>
-            Conoce los pasos que seguimos: el orde√±o temprano, el manejo cuidadoso de la leche, la maduraci√≥n del queso y el envasado listo para tu mesa.
-          </p>
-        </div>
-
-        <div class="route-panel reveal" data-reveal-delay="120">
-          <div class="route-tabs" role="tablist" aria-label="Etapas del proceso">
-            <button class="active" type="button" data-route="amanecer">Orde√±o</button>
-            <button type="button" data-route="sendero">Transformaci√≥n</button>
-            <button type="button" data-route="queseria">Maduraci√≥n</button>
-            <button type="button" data-route="atardecer">Envasado</button>
+        <div class="hero-stats">
+          <div>
+            <strong>3</strong>
+            <span>Generaciones</span>
           </div>
-          <div class="route-visual" data-route-visual>
-            <div class="route-sun"></div>
-            <div class="route-land"></div>
-            <div class="route-path"></div>
+          <div>
+            <strong>100%</strong>
+            <span>Leche natural</span>
           </div>
-          <div class="route-text" data-route-text>
-            <span>6:00 a.m.</span>
-            <h3>Orde√±o al amanecer</h3>
-            <p>La finca despierta con el sonido del campo, la leche fresca y una primera mirada a los animales.</p>
+          <div>
+            <strong>12+</strong>
+            <span>Variedades de queso</span>
+          </div>
+          <div>
+            <strong>50 ha</strong>
+            <span>Praderas verdes</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="experiences section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Nuestra labor</p>
-          <h2>De la leche al queso, cada paso importa.</h2>
-        </div>
-
-        <div class="experience-grid">
-          <article class="experience-card reveal">
-            <div class="experience-visual visual-milk"></div>
-            <h3>Producci√≥n de leche</h3>
-            <p>Leche orde√±ada con atenci√≥n diaria, lista para transformarse en productos frescos y nutritivos.</p>
-          </article>
-          <article class="experience-card reveal" data-reveal-delay="90">
-            <div class="experience-visual visual-trail"></div>
-            <h3>Bienestar del ganado</h3>
-            <p>Cuidamos la salud y la alimentaci√≥n de nuestras vacas para asegurar leche de calidad constante.</p>
-          </article>
-          <article class="experience-card reveal" data-reveal-delay="180">
-            <div class="experience-visual visual-cheese"></div>
-            <h3>Queso artesanal</h3>
-            <p>Transformamos la leche en quesos tradicionales con proceso manual y paciencia en cada lote.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery section" aria-label="Galeria de la finca">
-      <div class="container gallery-grid">
-        <div class="gallery-copy reveal">
-          <p class="section-kicker">Fotos de la finca</p>
-          <h2>Im√°genes reales de nuestra producci√≥n de leche y queso.</h2>
+    <section class="section about" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="section-kicker">Nuestra historia</span>
+          <h2>Hacienda Maria Jose es una finca de queso con corazÛn familiar.</h2>
           <p>
-            Descubre la hacienda, el ganado y los espacios donde se produce la leche fresca y se madura el queso artesanal.
+            Desde hace aÒos cuidamos cada detalle del ordeÒo, la elaboraciÛn y la maduraciÛn.
+            Nuestro trabajo nace en el campo y llega directo a tu mesa con sabor autÈntico.
           </p>
-        </div>
-
-        <div class="photo-wall">
-          <figure class="photo-tile tile-large reveal">
-            <span>Potreros al sol</span>
-          </figure>
-          <figure class="photo-tile tile-small tile-water reveal" data-reveal-delay="80">
-            <span>Quebrada</span>
-          </figure>
-          <figure class="photo-tile tile-small tile-cheese reveal" data-reveal-delay="160">
-            <span>Queseria</span>
-          </figure>
-          <figure class="photo-tile tile-wide reveal" data-reveal-delay="240">
-            <span>Sendero de arboles</span>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="products section" id="productos">
-      <div class="container products-grid">
-        <div class="products-copy reveal">
-          <p class="section-kicker">Productos</p>
-          <h2>Leche fresca y quesos artesanales de la hacienda.</h2>
           <p>
-            Producimos leche de campo y quesos elaborados con cuidado tradicional, listos para llegar a tu mesa con sabor aut√©ntico.
+            Aplicamos pr·cticas responsables con el ganado y elaboramos quesos tradicionales
+            a partir de leche propia, sin aditivos y con procesos artesanales.
           </p>
+          <div class="about-tags">
+            <span>?? Pastoreo natural</span>
+            <span>?? ProducciÛn artesanal</span>
+            <span>?? Calidad transparente</span>
+          </div>
         </div>
 
-        <div class="product-list">
-          <article class="product-item reveal">
-            <span class="product-badge">Fresco</span>
-            <h3>Leche de campo</h3>
-            <p>Recolectada a diario para conservar su frescura natural y su sabor equilibrado.</p>
-          </article>
-          <article class="product-item reveal" data-reveal-delay="90">
-            <span class="product-badge">Artesanal</span>
-            <h3>Queso campesino</h3>
-            <p>Elaborado con leche propia y reposado con cuidado para obtener textura y aroma √∫nicos.</p>
-          </article>
+        <div class="about-card reveal">
+          <img src="https://images.unsplash.com/photo-1560807707-6cc46a64a74d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" alt="Leche y queso de finca">
+          <div class="about-card-text">
+            <p class="eyebrow">Desde el corazÛn de la finca</p>
+            <p>La leche se ordeÒa antes del amanecer y la queserÌa trabaja con la frescura del mismo dÌa.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contacto">
-      <div class="contact-scene" aria-hidden="true">
-        <div class="contact-hill"></div>
-        <div class="contact-tree"></div>
+    <section class="section products" id="productos">
+      <div class="container section-heading reveal">
+        <span class="section-kicker">Nuestros productos</span>
+        <h2>Leche fresca y quesos con el verdadero sabor de finca.</h2>
       </div>
+
+      <div class="products-grid">
+        <article class="product-card reveal">
+          <span class="product-tag">Fresco</span>
+          <h3>Leche de campo</h3>
+          <p>Recolectada diariamente para mantener su textura cremosa, sabor limpio y valor natural.</p>
+        </article>
+        <article class="product-card reveal" data-reveal-delay="90">
+          <span class="product-tag">Artesanal</span>
+          <h3>Queso campesino</h3>
+          <p>Elaborado en pequeÒos lotes con leche propia y tÈcnicas tradicionales de la finca.</p>
+        </article>
+      </div>
+
+      <div class="gallery-grid reveal" data-reveal-delay="180">
+        <div class="gallery-item gallery-large">
+          <img src="https://images.unsplash.com/photo-1582991921743-1d1bb8d45da8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" alt="Vacas en la finca">
+          <span>Vacas felices</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1603205767059-3d74b6bdb0db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" alt="Leche fresca">
+          <span>Leche fresca</span>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1598514983209-1c8f233b658b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900" alt="Queso artesanal">
+          <span>Queso artesanal</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="proceso">
+      <div class="container section-heading reveal">
+        <span class="section-kicker">Nuestro proceso</span>
+        <h2>Transparencia desde el ordeÒo hasta el despacho.</h2>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step reveal">
+          <div class="step-number">1</div>
+          <h3>OrdeÒo temprano</h3>
+          <p>Recolectamos la leche en la maÒana para comenzar el proceso con la m·xima frescura.</p>
+        </article>
+        <article class="process-step reveal" data-reveal-delay="90">
+          <div class="step-number">2</div>
+          <h3>Control de calidad</h3>
+          <p>Verificamos temperatura, acidez y pureza antes de alimentar la queserÌa.</p>
+        </article>
+        <article class="process-step reveal" data-reveal-delay="180">
+          <div class="step-number">3</div>
+          <h3>ElaboraciÛn artesanal</h3>
+          <p>Trabajamos con cultivos naturales y dedicaciÛn para darle al queso su car·cter autÈntico.</p>
+        </article>
+        <article class="process-step reveal" data-reveal-delay="270">
+          <div class="step-number">4</div>
+          <h3>Despacho directo</h3>
+          <p>Empaquetamos y enviamos nuestros productos sin intermediarios, con atenciÛn personalizada.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
       <div class="container contact-grid reveal">
         <div>
-          <p class="section-kicker">Comunicaci√≥n</p>
-          <h2>Conecta con nosotros para leche, queso y redes sociales.</h2>
-          <p>
-            Hablamos directo contigo: consultas de producci√≥n, pedidos de leche y queso, o cualquier pregunta sobre la finca.
-          </p>
+          <span class="section-kicker">Contacto</span>
+          <h2>EscrÌbenos directo para pedidos de leche y queso.</h2>
+          <p>Estamos disponibles por WhatsApp y correo para coordinar tu pedido, reservar visita o resolver tus dudas.</p>
         </div>
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://wa.me/" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
-          <a class="btn btn-light" href="mailto:haciendamariajose@gmail.com">Enviar correo</a>
-          <div class="contact-social">
-            <p>S√≠guenos en redes:</p>
-            <a href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
-            <span>¬∑</span>
-            <a href="https://facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
-          </div>
+        <div class="contact-cards">
+          <a class="contact-card" href="https://wa.me/" target="_blank" rel="noreferrer">
+            <strong>WhatsApp</strong>
+            <span>+57 313 456 7890</span>
+            <small>Mensaje directo para pedidos.</small>
+          </a>
+          <a class="contact-card" href="mailto:haciendamariajose@gmail.com">
+            <strong>Correo</strong>
+            <span>haciendamariajose@gmail.com</span>
+            <small>EscrÌbenos y te respondemos r·pido.</small>
+          </a>
         </div>
       </div>
     </section>
@@ -299,11 +203,14 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <a class="brand" href="#inicio">
-        <span class="brand-mark"><img src="./assets/logo/Logo_FincaMJ.svg" alt="" aria-hidden="true"></span>
-        <span>Hacienda <em>Maria Jose</em></span>
-      </a>
-      <p>2026 - Leche fresca, queso artesanal y comunicaci√≥n directa desde la finca.</p>
+      <div class="footer-brand">
+        <span class="brand-mark"><img src="./assets/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose"></span>
+        <div>
+          <p>Hacienda <em>Maria Jose</em></p>
+          <small>Leche fresca y queso artesanal de finca</small>
+        </div>
+      </div>
+      <p>2026 © Hacienda Maria Jose. ProducciÛn familiar con transparencia y sabor autÈntico.</p>
     </div>
   </footer>
 
