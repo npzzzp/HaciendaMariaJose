@@ -306,13 +306,13 @@ button {
 }
 
 .cloud-one {
-  animation: drift 24s linear infinite;
+  animation: none;
   left: 42vw;
   top: 18vh;
 }
 
 .cloud-two {
-  animation: drift 32s linear infinite reverse;
+  animation: none;
   left: 68vw;
   top: 29vh;
   transform: scale(.72);
@@ -461,7 +461,7 @@ button {
 }
 
 .grass-field i {
-  animation: sway 2.8s ease-in-out infinite alternate;
+  animation: none;
   background: linear-gradient(180deg, #a8c96f, #315a22);
   border-radius: 100% 0 100% 0;
   display: block;
@@ -471,24 +471,19 @@ button {
 }
 
 .grass-field i:nth-child(2n) {
-  animation-delay: .5s;
   height: 68px;
 }
 
 .grass-field i:nth-child(3n) {
-  animation-delay: 1s;
   height: 102px;
 }
 
 .floating-leaves {
-  inset: 0;
-  pointer-events: none;
-  position: absolute;
-  z-index: 3;
+  display: none;
 }
 
 .floating-leaves span {
-  animation: leafFall 12s linear infinite;
+  animation: none;
   background: #c5d781;
   border-radius: 80% 0 80% 0;
   height: 18px;
@@ -602,7 +597,7 @@ h3 {
 }
 
 .marquee {
-  animation: marquee 24s linear infinite;
+  animation: none;
   display: flex;
   gap: 38px;
   width: max-content;
@@ -1259,6 +1254,28 @@ h3 {
   gap: 12px;
 }
 
+.contact-social {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: .94rem;
+}
+
+.contact-social p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.contact-social a {
+  color: var(--green-900);
+  font-weight: 700;
+}
+
+.contact-social span {
+  color: var(--muted);
+}
+
 .footer {
   background: #13140f;
   color: rgba(255,255,255,.72);
@@ -1281,15 +1298,14 @@ h3 {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
-  transition-delay: var(--delay, 0ms);
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @keyframes drift {

@@ -12,23 +12,23 @@ const panorama = document.querySelector("[data-panorama]");
 const routeContent = {
   amanecer: {
     time: "6:00 a.m.",
-    title: "Ordeño al amanecer",
-    copy: "La finca despierta con el sonido del campo, la leche fresca y una primera mirada a los animales.",
+    title: "Ordeño y leche fresca",
+    copy: "Comenzamos con el ordeño matutino y la recolección de leche fresca que da inicio a toda nuestra producción.",
   },
   sendero: {
     time: "9:30 a.m.",
-    title: "Sendero entre arboles",
-    copy: "El recorrido baja el ritmo: sombra, pasto, agua cercana y pequeñas pausas para mirar el paisaje.",
+    title: "Transformación cuidadosa",
+    copy: "La leche pasa por un proceso controlado donde se prepara para convertirse en productos confiables y naturales.",
   },
   queseria: {
     time: "11:00 a.m.",
-    title: "Parada en la queseria",
-    copy: "Una mirada breve al proceso artesanal para entender como la leche de la mañana se convierte en sabor.",
+    title: "Maduración del queso",
+    copy: "El queso se elabora y se deja reposar con atención para lograr la textura y el aroma de la finca.",
   },
   atardecer: {
     time: "5:20 p.m.",
-    title: "Atardecer en potreros",
-    copy: "La visita termina con luz dorada, aire fresco y la sensacion de haber estado dentro de la vida de la finca.",
+    title: "Envasado y salida",
+    copy: "Terminamos el día con el envasado de productos listos para distribución, manteniendo siempre la frescura.",
   },
 };
 
