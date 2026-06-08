@@ -695,7 +695,7 @@ h3 {
 }
 
 .nature {
-  background: linear-gradient(180deg, var(--cream) 0%, #eaf1df 100%);
+  background: linear-gradient(180deg, var(--green-100) 0%, var(--green-200) 100%);
   overflow: hidden;
 }
 
@@ -936,7 +936,7 @@ h3 {
 }
 
 .experiences {
-  background: var(--cream-2);
+  background: linear-gradient(135deg, rgba(240, 199, 106, 0.15) 0%, var(--cream-2) 100%);
 }
 
 .experience-grid {
@@ -1043,7 +1043,7 @@ h3 {
 }
 
 .gallery {
-  background: linear-gradient(180deg, var(--cream), #eef2e4);
+  background: linear-gradient(180deg, var(--green-200) 0%, var(--green-100) 100%);
 }
 
 .gallery-grid {
@@ -1147,7 +1147,7 @@ h3 {
 }
 
 .products {
-  background: var(--cream-2);
+  background: linear-gradient(135deg, rgba(219, 233, 200, 0.4) 0%, var(--cream) 100%);
 }
 
 .products-grid {
