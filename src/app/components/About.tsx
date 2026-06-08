@@ -57,8 +57,8 @@ export function About() {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
               <img
-                src="https://images.unsplash.com/photo-1641939193329-7071068dc40f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxkYWlyeSUyMGZhcm0lMjBncmVlbiUyMHBhc3R1cmUlMjBjb3dzfGVufDF8fHx8MTc4MDk0NzI0M3ww&ixlib=rb-4.1.0&q=80&w=800"
-                alt="Vacas pastando en La Pradera"
+                src="/assets/photos/IMG-20260608-WA0065.jpg"
+                alt="Detalle de la finca"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -76,8 +76,8 @@ export function About() {
             {/* Small accent image */}
             <div className="absolute -top-6 -left-6 w-32 h-32 rounded-xl overflow-hidden shadow-lg border-4 border-[#faf7f0] z-20">
               <img
-                src="https://images.unsplash.com/photo-1768850418251-17480117ac9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMG1pbGslMjBnbGFzcyUyMGJvdHRsZSUyMGZhcm18ZW58MXx8fHwxNzgwOTQ3MjUwfDA&ixlib=rb-4.1.0&q=80&w=300"
-                alt="Leche fresca en botella"
+                src="/assets/photos/IMG-20260608-WA0064.jpg"
+                alt="Detalle decorativo de la finca"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -93,10 +93,10 @@ export function About() {
               className="text-[#7a6b52] mb-6"
               style={{ fontSize: "1.05rem", lineHeight: 1.8 }}
             >
-              Todo comenzó cuando el abuelo Ernesto Restrepo decidió quedarse en
-              estas montañas y criar el mejor ganado del departamento. Hoy, sus
-              nietos continúan esa misión con el mismo amor y rigor artesanal,
-              incorporando técnicas modernas sin perder la esencia.
+              Nuestra historia nace en Hacienda Maria Jose, donde cada mañana
+              comienza con el ordeño directo y la dedicación al cuidado del ganado.
+              Aquí el trabajo en la finca se hace con respeto por la tierra y por
+              las familias que aportan la leche.
             </p>
             <p
               className="text-[#7a6b52] mb-8"

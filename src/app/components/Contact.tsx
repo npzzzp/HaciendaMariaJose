@@ -117,10 +117,10 @@ export function Contact() {
               <span className="text-sm">🌿</span>
             </div>
             <span style={{ fontFamily: "Georgia, serif", color: "white" }}>
-              Finca La Pradera
+              Hacienda Maria Jose
             </span>
           </div>
-          <p>© 2024 Finca La Pradera. Todos los derechos reservados.</p>
+          <p>© 2024 Hacienda Maria Jose. Todos los derechos reservados.</p>
           <p>Hecho con amor desde el Quindío 🇨🇴</p>
         </div>
       </footer>

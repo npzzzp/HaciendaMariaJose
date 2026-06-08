@@ -38,16 +38,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <button onClick={() => handleLink("#inicio")} className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-[#3a5e2f] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-            <span className="text-[#f9f6ef] text-lg">🌿</span>
-          </div>
+          <img src="/assets/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose" className="w-10 h-10 rounded-full bg-white p-2 shadow-lg" />
           <div className="text-left">
             <p className={`leading-none tracking-wide transition-colors ${scrolled ? "text-[#2c1f0e]" : "text-white"}`}
                style={{ fontFamily: "Georgia, serif", fontSize: "1.1rem", fontWeight: 600 }}>
-              Finca La Pradera
+              Hacienda Maria Jose
             </p>
             <p className={`text-xs tracking-widest uppercase transition-colors ${scrolled ? "text-[#7a6b52]" : "text-white/80"}`}>
-              Quesos & Leche Artesanal
+              Quesos y Leche de Finca
             </p>
           </div>
         </button>
@@ -67,13 +65,6 @@ export function Navbar() {
             </li>
           ))}
         </ul>
-
-        <button
-          onClick={() => handleLink("#contacto")}
-          className="hidden md:block px-5 py-2 rounded-full text-sm bg-[#3a5e2f] text-white hover:bg-[#2d4a24] transition-colors shadow"
-        >
-          Pedir Ahora
-        </button>
 
         {/* Mobile menu toggle */}
         <button
@@ -105,14 +96,6 @@ export function Navbar() {
                   </button>
                 </li>
               ))}
-              <li className="pt-3">
-                <button
-                  onClick={() => handleLink("#contacto")}
-                  className="w-full py-3 rounded-full bg-[#3a5e2f] text-white text-center"
-                >
-                  Pedir Ahora
-                </button>
-              </li>
             </ul>
           </motion.div>
         )}

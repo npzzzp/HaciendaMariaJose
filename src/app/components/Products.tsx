@@ -4,42 +4,37 @@ import { motion, useInView } from "motion/react";
 const galleryItems = [
   {
     id: 1,
-    label: "Nuestros Campesinos",
-    caption: "Proveedores de leche fresca que trabajan estas tierras cada mañana.",
-    image:
-      "https://images.unsplash.com/photo-1695492600853-e2fb875071d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXJtZXIlMjBtaWxrbWFuJTIwY291bnRyeXNpZGUlMjBjb2xvbWJpYSUyMHJ1cmFsfGVufDF8fHx8MTc4MDk1MDE1N3ww&ixlib=rb-4.1.0&q=80&w=800",
+    label: "Producción de leche",
+    caption: "Campesinos de la región aportando leche fresca cada mañana.",
+    image: "/assets/photos/IMG-20260608-WA0047.jpg",
     span: "row-span-2",
   },
   {
     id: 2,
-    label: "Nuestras Vacas",
-    caption: "Ganado Holstein criado en libre pastoreo a 2.400 m.s.n.m.",
-    image:
-      "https://images.unsplash.com/photo-1760523876904-9301f0eb842e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYWlyeSUyMGNvd3MlMjBncmF6aW5nJTIwZ3JlZW4lMjBoaWxsc3xlbnwxfHx8fDE3ODA5NTAxNTd8MA&ixlib=rb-4.1.0&q=80&w=800",
+    label: "Trabajo en campo",
+    caption: "Los campesinos que alimentan al ganado y cuidan la finca.",
+    image: "/assets/photos/IMG-20260608-WA0048.jpg",
     span: "",
   },
   {
     id: 3,
-    label: "La Finca",
-    caption: "Nuestra casa en el corazón del Quindío, rodeada de montañas.",
-    image:
-      "https://images.unsplash.com/photo-1761788457227-7b50e0f63c87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxmYXJtZXIlMjBtaWxrbWFuJTIwY291bnRyeXNpZGUlMjBjb2xvbWJpYSUyMHJ1cmFsfGVufDF8fHx8MTc4MDk1MDE1N3ww&ixlib=rb-4.1.0&q=80&w=800",
+    label: "Equipo local",
+    caption: "Hombres y mujeres que hacen posible la producción diaria.",
+    image: "/assets/photos/IMG-20260608-WA0050.jpg",
     span: "",
   },
   {
     id: 4,
-    label: "Praderas Verdes",
-    caption: "50 hectáreas de pasto limpio sin agroquímicos.",
-    image:
-      "https://images.unsplash.com/photo-1638455749550-6e69f940640f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxmYXJtZXIlMjBtaWxrbWFuJTIwY291bnRyeXNpZGUlMjBjb2xvbWJpYSUyMHJ1cmFsfGVufDF8fHx8MTc4MDk1MDE1N3ww&ixlib=rb-4.1.0&q=80&w=800",
+    label: "Proveedor de leche",
+    caption: "Familias campesinas que confían en Hacienda Maria Jose.",
+    image: "/assets/photos/IMG-20260608-WA0053.jpg",
     span: "",
   },
   {
     id: 5,
-    label: "Vacas en las Colinas",
-    caption: "El libre pastoreo es la base del sabor auténtico de nuestra leche.",
-    image:
-      "https://images.unsplash.com/photo-1779496876269-34dec26ac252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxkYWlyeSUyMGNvd3MlMjBncmF6aW5nJTIwZ3JlZW4lMjBoaWxsc3xlbnwxfHx8fDE3ODA5NTAxNTd8MA&ixlib=rb-4.1.0&q=80&w=800",
+    label: "Cooperación rural",
+    caption: "La leche se recoge y procesa con respeto por las personas y el campo.",
+    image: "/assets/photos/IMG-20260608-WA0054.jpg",
     span: "",
   },
 ];

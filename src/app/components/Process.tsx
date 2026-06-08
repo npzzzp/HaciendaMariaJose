@@ -174,7 +174,7 @@ export function Process() {
             {/* Mini map embed placeholder */}
             <div className="shrink-0 w-full md:w-64 h-44 rounded-2xl overflow-hidden border-2 border-white/20 shadow-xl">
               <iframe
-                title="Ubicación Finca La Pradera"
+                title="Ubicación Hacienda Maria Jose"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31766.060398890037!2d-75.57515!3d4.63799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38878b48bdfe89%3A0x3d7ababf0e6c31!2sSalento%2C%20Quind%C3%ADo!5e0!3m2!1ses!2sco!4v1699999999999"
                 width="100%"
                 height="100%"

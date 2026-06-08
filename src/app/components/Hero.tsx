@@ -16,8 +16,7 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1778847749512-1c15d2fe580c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxncmVlbiUyMGZhcm1sYW5kJTIwY291bnRyeXNpZGUlMjBtb3JuaW5nJTIwbGFuZHNjYXBlfGVufDF8fHx8MTc4MDk0NzI1MHww&ixlib=rb-4.1.0&q=80&w=1920')",
+          backgroundImage: "url('/assets/photos/IMG-20260608-WA0066.jpg')",
         }}
       />
       {/* Gradient overlay */}
@@ -72,8 +71,8 @@ export function Hero() {
             lineHeight: 1.15,
           }}
         >
-          Del Pasto a Tu Mesa,<br />
-          <span style={{ color: "#c8e6a0" }}>con Alma de Campo</span>
+          Hacienda <em>Maria Jose</em><br />
+          <span style={{ color: "#c8e6a0" }}>Leche fresca y queso artesanal</span>
         </motion.h1>
 
         <motion.p
@@ -83,8 +82,8 @@ export function Hero() {
           className="text-white/85 max-w-2xl mx-auto mb-10"
           style={{ fontSize: "1.15rem", lineHeight: 1.7 }}
         >
-          En Finca La Pradera elaboramos quesos artesanales y leche fresca con el
-          cuidado de tres generaciones. Cada producto lleva el sabor auténtico de
+          En Hacienda Maria Jose elaboramos quesos artesanales y leche fresca con el
+          cuidado de nuestras familias. Cada producto lleva el sabor auténtico de
           nuestros campos.
         </motion.p>
 
