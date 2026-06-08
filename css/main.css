@@ -94,6 +94,7 @@ button {
 .brand-mark {
   align-items: center;
   background: var(--green-800);
+  border-radius: 12px;
   color: var(--cream-2);
   display: inline-flex;
   font-family: var(--font-body);
@@ -102,7 +103,15 @@ button {
   height: 38px;
   justify-content: center;
   letter-spacing: .08em;
+  overflow: hidden;
   width: 38px;
+}
+
+.brand-mark img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .hero .brand,
