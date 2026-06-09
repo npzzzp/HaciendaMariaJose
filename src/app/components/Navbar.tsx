@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Productos", href: "#productos" },
-  { label: "Proceso", href: "#proceso" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -76,34 +75,23 @@ export function Navbar() {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden shadow-lg"
-            style={{ overflow: "visible" }}
-          >
-            <div className="bg-[#faf7f0]/98">
-              <ul className="flex flex-col gap-1 px-6 pb-6 pt-2">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <button
-                      onClick={() => handleLink(link.href)}
-                      className="w-full text-left py-3 border-b border-[#e8dfc8] text-[#2c1f0e] text-base"
-                      style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 500 }}
-                    >
-                      {link.label}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {menuOpen && (
+        <div className="md:hidden bg-[#faf7f0] shadow-lg border-t border-[#e8dfc8]">
+          <ul className="flex flex-col px-6 pb-6 pt-2">
+            {links.map((link) => (
+              <li key={link.href}>
+                <button
+                  onClick={() => handleLink(link.href)}
+                  className="w-full text-left py-4 border-b border-[#e8dfc8] text-[#2c1f0e] text-base active:bg-[#f0ebe0]"
+                  style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 500 }}
+                >
+                  {link.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </motion.nav>
   );
 }
