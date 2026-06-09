@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { Milk, ChefHat, Truck, Leaf } from "lucide-react";
 
 const galleryItems = [
   {
@@ -33,9 +34,32 @@ const galleryItems = [
   {
     id: 5,
     label: "Sabor de la tierra",
-    caption: "Un vistazo al entorno y la vida del campo que da identidad a nuestra producción.",
+    caption: "El entorno y la vida del campo que dan identidad a nuestra producción.",
     image: "/assets/photos/4987818660302883935.jpg",
     span: "",
+  },
+];
+
+const highlights = [
+  {
+    icon: <Milk size={20} />,
+    title: "Leche Fresca",
+    desc: "Recogida cada mañana directamente de nuestro ganado. Sin pasteurizar industrialmente ni almacenar días.",
+  },
+  {
+    icon: <ChefHat size={20} />,
+    title: "Queso Artesanal",
+    desc: "Elaborado a mano con recetas propias. Queso blanco fresco, firme y de sabor genuino de finca.",
+  },
+  {
+    icon: <Leaf size={20} />,
+    title: "Sin Aditivos",
+    desc: "Solo leche, sal y cuajo natural. Sin conservantes ni procesos industriales que cambien el sabor.",
+  },
+  {
+    icon: <Truck size={20} />,
+    title: "Directo de la Finca",
+    desc: "Vendemos directo, sin intermediarios. Sabes exactamente de dónde viene lo que comes.",
   },
 ];
 
@@ -51,19 +75,21 @@ export function Products() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-6"
+          className="text-center mb-4"
         >
-          <span className="text-[#3a5e2f] text-sm tracking-widest uppercase">
+          <span className="text-[#3a5e2f] text-xs tracking-widest uppercase"
+            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 700 }}>
             Lo que Hacemos
           </span>
           <h2
             className="text-[#2c1f0e] mt-3"
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "'Playfair Display', Georgia, serif",
               fontSize: "clamp(1.8rem, 4vw, 3rem)",
+              fontWeight: 600,
             }}
           >
-            Queso y Leche, Nada Más
+            Producción de Queso y Leche
           </h2>
         </motion.div>
 
@@ -72,34 +98,62 @@ export function Products() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mx-auto mb-16 max-w-3xl rounded-3xl border border-[#e8dfc8] bg-[#fff8ee] p-8 text-center shadow-sm"
+          className="mx-auto mb-14 max-w-2xl text-center"
         >
-          <h3
-            className="text-[#2c1f0e] mb-3"
-            style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.3rem, 3vw, 2rem)" }}
-          >
-            Producción de queso y leche, con el corazón de la finca
-          </h3>
-          <p className="text-[#7a6b52]" style={{ lineHeight: 1.8 }}>
-            En Hacienda Maria Jose trabajamos la leche y el queso como centro de nuestra producción familiar, con dedicación diaria y un enfoque cercano a la gente y al campo.
+          <p className="text-[#7a6b52]"
+            style={{ fontFamily: "'Nunito', sans-serif", lineHeight: 1.85, fontSize: "1.05rem", fontWeight: 300 }}>
+            En Hacienda Maria Jose nos dedicamos a dos cosas y las hacemos bien:
+            producir leche fresca y elaborar queso artesanal. Todo sale de nuestras
+            manos, de nuestra finca, del mismo lugar de siempre.
           </p>
+        </motion.div>
+
+        {/* Product highlights grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16"
+        >
+          {highlights.map((h, i) => (
+            <motion.div
+              key={h.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.35 + i * 0.1 }}
+              className="bg-[#fff8ee] rounded-2xl p-6 border border-[#e8dfc8] shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="w-10 h-10 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] flex items-center justify-center mb-4">
+                {h.icon}
+              </div>
+              <h3 className="text-[#2c1f0e] mb-2"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.05rem" }}>
+                {h.title}
+              </h3>
+              <p className="text-[#7a6b52] text-sm"
+                style={{ fontFamily: "'Nunito', sans-serif", lineHeight: 1.7, fontWeight: 300 }}>
+                {h.desc}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Section title for gallery */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mb-10"
         >
           <h3
             className="text-[#2c1f0e]"
-            style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.3rem, 3vw, 2rem)" }}
+            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.3rem, 3vw, 1.8rem)", fontWeight: 600 }}
           >
             La Gente y el Lugar Detrás del Sabor
           </h3>
-          <p className="text-[#7a6b52] mt-2 text-sm">
-            Campesinos proveedores, vacas felices y una finca con alma propia.
+          <p className="text-[#7a6b52] mt-2 text-sm"
+            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 400 }}>
+            Campesinos proveedores, vacas y una finca con alma propia.
           </p>
         </motion.div>
 
@@ -110,7 +164,7 @@ export function Products() {
               key={item.id}
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
               className={`relative rounded-2xl overflow-hidden group cursor-default ${
                 item.id === 1 ? "row-span-2" : ""
               }`}
@@ -123,14 +177,16 @@ export function Products() {
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-white text-sm font-medium">{item.label}</p>
-                <p className="text-white/80 text-xs mt-0.5" style={{ lineHeight: 1.4 }}>
+                <p className="text-white text-sm font-medium"
+                  style={{ fontFamily: "'Nunito', sans-serif" }}>{item.label}</p>
+                <p className="text-white/80 text-xs mt-0.5"
+                  style={{ fontFamily: "'Nunito', sans-serif", lineHeight: 1.4 }}>
                   {item.caption}
                 </p>
               </div>
               {/* Always-visible label on mobile */}
               <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/50 to-transparent md:hidden">
-                <p className="text-white text-xs">{item.label}</p>
+                <p className="text-white text-xs" style={{ fontFamily: "'Nunito', sans-serif" }}>{item.label}</p>
               </div>
             </motion.div>
           ))}

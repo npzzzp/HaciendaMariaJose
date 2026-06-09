@@ -5,18 +5,18 @@ import { Heart, ShieldCheck, HandHeart } from "lucide-react";
 const values = [
   {
     icon: <Heart size={22} />,
-    title: "Producción Familiar",
-    desc: "Todo se hace con dedicación, cuidado y trabajo diario en la finca, como en casa.",
+    title: "Trabajo Familiar",
+    desc: "La finca la llevamos entre todos. El ordeño, el queso, la distribución — cada paso lo hacemos nosotros mismos, con dedicación diaria.",
   },
   {
     icon: <HandHeart size={22} />,
-    title: "Leche y Queso de Finca",
-    desc: "La base de nuestra producción es la leche fresca y el queso artesanal de origen local.",
+    title: "Leche Fresca del Día",
+    desc: "Recogemos la leche cada mañana directamente de nuestro ganado. Sin intermediarios, sin días de espera. Fresca de origen.",
   },
   {
     icon: <ShieldCheck size={22} />,
-    title: "Proceso Responsable",
-    desc: "Cuidamos la higiene, la calidad y el bienestar de la producción sin exagerar el lenguaje comercial.",
+    title: "Queso Artesanal",
+    desc: "Elaboramos nuestro queso a mano, con recetas propias y cuidado en cada etapa. El resultado habla por sí solo.",
   },
 ];
 
@@ -34,10 +34,11 @@ export function About() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <span className="text-[#3a5e2f] text-sm tracking-widest uppercase">
+          <span className="text-[#3a5e2f] text-xs tracking-widest uppercase"
+            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 700 }}>
             Nuestra Historia
           </span>
-          <h2 className="text-[#2c1f0e] mt-3" style={{ fontFamily: "Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)" }}>
+          <h2 className="text-[#2c1f0e] mt-3" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 600 }}>
             Una Finca con Alma
           </h2>
         </motion.div>
@@ -63,16 +64,16 @@ export function About() {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -bottom-6 -right-6 z-20 bg-[#fff8ee] rounded-2xl shadow-xl p-5 border border-[#e8dfc8]"
             >
-              <p className="text-[#3a5e2f]" style={{ fontFamily: "Georgia, serif", fontSize: "2rem", fontWeight: 700 }}>
+              <p className="text-[#3a5e2f]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.5rem", fontWeight: 700 }}>
                 Campo de la Cruz
               </p>
-              <p className="text-[#7a6b52] text-sm">Producción familiar en la finca</p>
+              <p className="text-[#7a6b52] text-sm mt-1" style={{ fontFamily: "'Nunito', sans-serif" }}>Atlántico · Producción familiar</p>
             </motion.div>
             {/* Small accent image */}
             <div className="absolute -top-6 -left-6 w-32 h-32 rounded-xl overflow-hidden shadow-lg border-4 border-[#faf7f0] z-20">
               <img
                 src="/assets/photos/4987818660302883932.jpg"
-                alt="Detalle decorativo de la finca"
+                alt="Detalle de la finca"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -86,33 +87,39 @@ export function About() {
           >
             <p
               className="text-[#7a6b52] mb-6"
-              style={{ fontSize: "1.05rem", lineHeight: 1.8 }}
+              style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1.05rem", lineHeight: 1.85, fontWeight: 300 }}
             >
-              Nuestra historia nace en Hacienda Maria Jose, ubicada en Campo de la Cruz.
-              Allí, cada mañana comienza con el ordeño directo y el cuidado del ganado,
-              en un trabajo familiar que se realiza con dedicación y respeto por la tierra.
+              Hacienda Maria Jose está en Campo de la Cruz, Atlántico. Aquí la jornada
+              empieza antes del amanecer — con el ordeño, el cuidado del ganado y el
+              trabajo silencioso que hace posible todo lo que ponemos en tus manos.
             </p>
             <p
               className="text-[#7a6b52] mb-8"
-              style={{ fontSize: "1.05rem", lineHeight: 1.8 }}
+              style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1.05rem", lineHeight: 1.85, fontWeight: 300 }}
             >
-              El trabajo en la finca se desarrolla de forma cercana y constante.
-              La leche se recoge y se transforma en queso artesanal con cuidado,
-              manteniendo el valor de una producción familiar y auténtica.
+              No somos una empresa grande ni una marca de diseño. Somos una familia que
+              trabaja su tierra, cuida sus vacas y elabora queso artesanal con el mismo
+              proceso de siempre — con paciencia, manos propias y sabor verdadero.
             </p>
             <div className="flex gap-4 flex-wrap">
-              <div className="px-5 py-3 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] text-sm">
-                Leche fresca y queso artesanal
+              <div className="px-5 py-3 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] text-sm"
+                style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
+                Queso artesanal
               </div>
-              <div className="px-5 py-3 rounded-full bg-[#c8a96e]/15 text-[#7a6b52] text-sm">
-                Producción familiar en Campo de la Cruz
+              <div className="px-5 py-3 rounded-full bg-[#c8a96e]/15 text-[#7a6b52] text-sm"
+                style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
+                Leche fresca de finca
+              </div>
+              <div className="px-5 py-3 rounded-full bg-[#e8dfc8] text-[#5a4a32] text-sm"
+                style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
+                Campo de la Cruz, Atlántico
               </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Values grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Values grid — 3 items centered */}
+        <div className="flex flex-wrap justify-center gap-6">
           {values.map((v, i) => (
             <motion.div
               key={v.title}
@@ -120,14 +127,15 @@ export function About() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + i * 0.12 }}
               className="bg-[#fff8ee] rounded-2xl p-6 border border-[#e8dfc8] hover:shadow-md transition-shadow"
+              style={{ width: "clamp(260px, 30%, 340px)" }}
             >
               <div className="w-10 h-10 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] flex items-center justify-center mb-4">
                 {v.icon}
               </div>
-              <h3 className="text-[#2c1f0e] mb-2" style={{ fontFamily: "Georgia, serif" }}>
+              <h3 className="text-[#2c1f0e] mb-2" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.1rem" }}>
                 {v.title}
               </h3>
-              <p className="text-[#7a6b52] text-sm" style={{ lineHeight: 1.7 }}>
+              <p className="text-[#7a6b52] text-sm" style={{ fontFamily: "'Nunito', sans-serif", lineHeight: 1.75, fontWeight: 300 }}>
                 {v.desc}
               </p>
             </motion.div>

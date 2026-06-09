@@ -6,7 +6,7 @@ import { Contact } from "./components/Contact";
 
 export default function App() {
   return (
-    <div className="min-h-screen" style={{ background: "#faf7f0", fontFamily: "system-ui, sans-serif" }}>
+    <div className="min-h-screen" style={{ background: "#faf7f0", fontFamily: "'Nunito', system-ui, sans-serif" }}>
       <Navbar />
       <Hero />
       <About />

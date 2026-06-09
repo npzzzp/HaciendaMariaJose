@@ -41,7 +41,7 @@ export function Navbar() {
           <img src="/assets/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose" className="w-10 h-10 rounded-full bg-white p-2 shadow-lg" />
           <div className="text-left">
             <p className={`leading-none tracking-wide transition-colors ${scrolled ? "text-[#2c1f0e]" : "text-white"}`}
-               style={{ fontFamily: "Georgia, serif", fontSize: "1.1rem", fontWeight: 600 }}>
+               style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.1rem", fontWeight: 600 }}>
               Hacienda Maria Jose
             </p>
             <p className={`text-xs tracking-widest uppercase transition-colors ${scrolled ? "text-[#7a6b52]" : "text-white/80"}`}>

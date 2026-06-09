@@ -57,7 +57,7 @@ export function Process() {
           <h2
             className="text-[#2c1f0e] mt-3"
             style={{
-              fontFamily: "Georgia, serif",
+              fontFamily: "'Playfair Display', Georgia, serif",
               fontSize: "clamp(1.8rem, 4vw, 3rem)",
             }}
           >
@@ -110,7 +110,7 @@ export function Process() {
                   </span>
                   <h3
                     className="text-[#2c1f0e] mt-2 mb-3"
-                    style={{ fontFamily: "Georgia, serif" }}
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                   >
                     {step.title}
                   </h3>
@@ -148,7 +148,7 @@ export function Process() {
               <h3
                 className="text-white mb-3"
                 style={{
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "'Playfair Display', Georgia, serif",
                   fontSize: "clamp(1.4rem, 3vw, 2rem)",
                 }}
               >

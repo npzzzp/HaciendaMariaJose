@@ -20,42 +20,19 @@ export function Hero() {
         }}
       />
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
-
-      {/* Animated floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-white/20"
-            style={{
-              left: `${15 + i * 14}%`,
-              top: `${20 + (i % 3) * 20}%`,
-            }}
-            animate={{
-              y: [-10, 10, -10],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.4,
-            }}
-          />
-        ))}
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70" />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-16 md:pt-20">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20 pb-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-5 py-2 mb-8"
         >
-          <span className="text-sm text-white/90 tracking-[0.18em] uppercase">
-            🌿 Leche y queso de finca
+          <span className="text-sm text-white/90 tracking-[0.18em] uppercase"
+            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 500 }}>
+            🌿 Campo de la Cruz, Atlántico
           </span>
         </motion.div>
 
@@ -63,17 +40,20 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="text-white mb-6 tracking-[-0.02em]"
+          className="text-white mb-6"
           style={{
-            fontFamily: "Georgia, serif",
-            fontSize: "clamp(2.25rem, 5.5vw, 4.75rem)",
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontSize: "clamp(2.5rem, 6vw, 5rem)",
             fontWeight: 700,
-            lineHeight: 1.12,
-            letterSpacing: "-0.02em",
+            lineHeight: 1.1,
+            letterSpacing: "-0.01em",
           }}
         >
-          Hacienda <em>Maria Jose</em><br />
-          <span style={{ color: "#c8e6a0" }}>Leche fresca y queso artesanal</span>
+          Hacienda <em>Maria Jose</em>
+          <br />
+          <span style={{ color: "#c8e6a0", fontWeight: 400, fontStyle: "italic", fontSize: "0.75em" }}>
+            Del ordeño a tu mesa
+          </span>
         </motion.h1>
 
         <motion.p
@@ -81,11 +61,11 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-white/85 max-w-2xl mx-auto mb-10"
-          style={{ fontSize: "1.15rem", lineHeight: 1.7 }}
+          style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1.1rem", lineHeight: 1.75, fontWeight: 300 }}
         >
-          En Hacienda Maria Jose elaboramos quesos artesanales y leche fresca con el
-          cuidado de nuestras familias. Cada producto lleva el sabor auténtico de
-          nuestros campos.
+          Somos una finca familiar en el corazón de Campo de la Cruz. Cada mañana
+          ordeñamos nuestras vacas y transformamos esa leche en queso artesanal con
+          las manos, el tiempo y el cuidado de siempre.
         </motion.p>
 
         <motion.div
@@ -97,19 +77,18 @@ export function Hero() {
           <button
             onClick={() => handleScroll("#productos")}
             className="px-8 py-4 rounded-full bg-[#3a5e2f] text-white hover:bg-[#2d4a24] transition-all hover:scale-105 shadow-xl"
-            style={{ fontSize: "1rem" }}
+            style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.95rem", fontWeight: 600, letterSpacing: "0.04em" }}
           >
             Ver Productos
           </button>
           <button
             onClick={() => handleScroll("#nosotros")}
             className="px-8 py-4 rounded-full bg-white/15 backdrop-blur-sm border border-white/40 text-white hover:bg-white/25 transition-all"
-            style={{ fontSize: "1rem" }}
+            style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.95rem", fontWeight: 500 }}
           >
             Conocer la Finca
           </button>
         </motion.div>
-
       </div>
 
       {/* Scroll indicator */}

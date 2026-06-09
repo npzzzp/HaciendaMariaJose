@@ -179,3 +179,11 @@
     line-height: 1.5;
   }
 }
+
+/* ─── Custom font helpers ─────────────────────────────── */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.font-body {
+  font-family: 'Nunito', system-ui, sans-serif;
+}
