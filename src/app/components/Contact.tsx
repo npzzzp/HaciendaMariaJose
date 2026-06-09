@@ -218,7 +218,7 @@ export function Contact() {
             </div>
           </div>
           <p style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 300 }}>
-            Hecho con amor desde Campo de la Cruz 🌿
+            Hecho con amor desde Campo de la Cruz.
           </p>
         </div>
       </footer>
