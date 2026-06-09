@@ -83,20 +83,24 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#faf7f0]/98 overflow-hidden shadow-lg"
+            className="md:hidden shadow-lg"
+            style={{ overflow: "visible" }}
           >
-            <ul className="flex flex-col gap-1 px-6 pb-6 pt-2">
-              {links.map((link) => (
-                <li key={link.href}>
-                  <button
-                    onClick={() => handleLink(link.href)}
-                    className="w-full text-left py-3 border-b border-[#e8dfc8] text-[#2c1f0e] text-base"
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <div className="bg-[#faf7f0]/98">
+              <ul className="flex flex-col gap-1 px-6 pb-6 pt-2">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => handleLink(link.href)}
+                      className="w-full text-left py-3 border-b border-[#e8dfc8] text-[#2c1f0e] text-base"
+                      style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 500 }}
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
