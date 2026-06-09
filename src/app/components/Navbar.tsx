@@ -43,9 +43,6 @@ export function Navbar() {
                style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.1rem", fontWeight: 600 }}>
               Hacienda Maria Jose
             </p>
-            <p className={`text-xs tracking-widest uppercase transition-colors ${scrolled ? "text-[#7a6b52]" : "text-white/80"}`}>
-              Quesos y Leche de Finca
-            </p>
           </div>
         </button>
 
