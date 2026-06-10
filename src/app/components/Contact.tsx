@@ -21,7 +21,7 @@ export function Contact() {
             <div className="relative">
               <div className="w-44 h-44 rounded-full bg-[#fff8ee] border-4 border-[#e8dfc8] shadow-2xl flex items-center justify-center overflow-hidden">
                 <img
-                  src="/assets/logo/Logo_FincaMJ.svg"
+                  src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/Logo_FincaMJ.svg"
                   alt="Logo Hacienda Maria Jose"
                   className="w-32 h-32 object-contain"
                 />
@@ -70,7 +70,7 @@ export function Contact() {
             <div className="flex flex-col gap-5">
               {/* WhatsApp */}
               <motion.a
-                href="https://wa.me/573103635071"
+                href="https://wa.me/573134567890"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -20 }}
@@ -94,7 +94,7 @@ export function Contact() {
                     WhatsApp
                   </p>
                   <p className="text-[#7a6b52] text-sm mt-0.5"
-                    style={{ fontFamily: "'Nunito', sans-serif" }}>+57 310 363 5071</p>
+                    style={{ fontFamily: "'Nunito', sans-serif" }}>+57 313 456 7890</p>
                 </div>
                 <ExternalLink
                   size={16}
@@ -202,7 +202,7 @@ export function Contact() {
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#fff8ee] border-2 border-[#c8a96e]/40 flex items-center justify-center overflow-hidden shadow-md">
               <img
-                src="/assets/logo/Logo_FincaMJ.svg"
+                src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/Logo_FincaMJ.svg"
                 alt="Logo Hacienda Maria Jose"
                 className="w-9 h-9 object-contain"
               />
@@ -218,7 +218,7 @@ export function Contact() {
             </div>
           </div>
           <p style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 300 }}>
-            Hecho con amor desde Campo de la Cruz.
+            Hecho con amor desde Campo de la Cruz 🌿
           </p>
         </div>
       </footer>

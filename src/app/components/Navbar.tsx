@@ -6,6 +6,7 @@ const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Nosotros", href: "#nosotros" },
   { label: "Productos", href: "#productos" },
+  { label: "Galería", href: "#galeria" },
   { label: "Contacto", href: "#contacto" },
 ];
 
@@ -37,11 +38,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <button onClick={() => handleLink("#inicio")} className="flex items-center gap-3 group">
-          <img src="/assets/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose" className="w-10 h-10 rounded-full bg-white p-2 shadow-lg" />
+          <img src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose" className="w-10 h-10 rounded-full bg-white p-2 shadow-lg" />
           <div className="text-left">
             <p className={`leading-none tracking-wide transition-colors ${scrolled ? "text-[#2c1f0e]" : "text-white"}`}
                style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.1rem", fontWeight: 600 }}>
               Hacienda Maria Jose
+            </p>
+            <p className={`text-xs tracking-widest uppercase transition-colors ${scrolled ? "text-[#7a6b52]" : "text-white/80"}`}>
+              Quesos y Leche de Finca
             </p>
           </div>
         </button>

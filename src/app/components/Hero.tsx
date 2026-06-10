@@ -16,7 +16,7 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/assets/photos/IMG-20260608-WA0066.jpg')",
+          backgroundImage: "url('https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/IMG-20260608-WA0066.jpg')",
         }}
       />
       {/* Gradient overlay */}
@@ -79,7 +79,7 @@ export function Hero() {
             className="px-8 py-4 rounded-full bg-[#3a5e2f] text-white hover:bg-[#2d4a24] transition-all hover:scale-105 shadow-xl"
             style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.95rem", fontWeight: 600, letterSpacing: "0.04em" }}
           >
-            Qué hacemos
+            Ver Productos
           </button>
           <button
             onClick={() => handleScroll("#nosotros")}
