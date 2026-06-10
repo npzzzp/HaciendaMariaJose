@@ -24,17 +24,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20 pb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-5 py-2 mb-8"
-        >
-          <span className="text-sm text-white/90 tracking-[0.18em] uppercase"
-            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 500 }}>
-            🌿 Campo de la Cruz, Atlántico
-          </span>
-        </motion.div>
+
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
