@@ -70,7 +70,7 @@ export function Contact() {
             <div className="flex flex-col gap-5">
               {/* WhatsApp */}
               <motion.a
-                href="https://wa.me/573134567890"
+                href="https://wa.me/573103635071"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -20 }}
@@ -94,7 +94,7 @@ export function Contact() {
                     WhatsApp
                   </p>
                   <p className="text-[#7a6b52] text-sm mt-0.5"
-                    style={{ fontFamily: "'Nunito', sans-serif" }}>+57 313 456 7890</p>
+                    style={{ fontFamily: "'Nunito', sans-serif" }}>+57 310 363 5071</p>
                 </div>
                 <ExternalLink
                   size={16}
