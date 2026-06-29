@@ -79,6 +79,33 @@ export function Hero() {
             Conocer la Finca
           </button>
         </motion.div>
+
+        {/* Con el apoyo de */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.85 }}
+          className="mt-12 flex flex-col items-center gap-4"
+        >
+          <p className="text-white/40 text-xs tracking-widest uppercase"
+            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
+            Con el apoyo de
+          </p>
+          <div className="flex items-center gap-6">
+            <img
+              src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/sena-seeklogo.png"
+              alt="SENA"
+              className="h-10 object-contain brightness-0 invert opacity-70"
+            />
+            <div className="w-px h-8 bg-white/20" />
+            <img
+              src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/fondo-emprender-sena-seeklogo.png"
+              alt="Fondo Emprender"
+              className="h-10 object-contain brightness-0 invert opacity-70"
+            />
+          </div>
+        </motion.div>
+
       </div>
 
       {/* Scroll indicator */}

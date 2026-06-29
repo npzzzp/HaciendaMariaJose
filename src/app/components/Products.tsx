@@ -38,6 +38,20 @@ const galleryItems = [
     image: "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/4987818660302883935.jpg",
     span: "",
   },
+  {
+    id: 6,
+    label: "Actividad de mercadeo en Las Flores",
+    caption: "Actividad de mercadeo en sector Las Flores y San Salvador.",
+    image: "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/IMG-20260629-WA0008.jpg",
+    span: "",
+  },
+  {
+    id: 7,
+    label: "Actividad de mercadeo en San Salvador",
+    caption: "Actividad de mercadeo en sector Las Flores y San Salvador.",
+    image: "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/IMG-20260629-WA0011.jpg",
+    span: "",
+  },
 ];
 
 const highlights = [

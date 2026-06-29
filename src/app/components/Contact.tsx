@@ -220,6 +220,26 @@ export function Contact() {
           <p style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 300 }}>
             Hecho con amor desde Campo de la Cruz 🌿
           </p>
+          {/* Con el apoyo de */}
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-white/30 text-xs tracking-widest uppercase"
+              style={{ fontFamily: "'Nunito', sans-serif" }}>
+              Con el apoyo de
+            </p>
+            <div className="flex items-center gap-4">
+              <img
+                src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/sena-seeklogo.png"
+                alt="SENA"
+                className="h-7 object-contain brightness-0 invert opacity-50"
+              />
+              <div className="w-px h-5 bg-white/20" />
+              <img
+                src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/fondo-emprender-sena-seeklogo.png"
+                alt="Fondo Emprender"
+                className="h-7 object-contain brightness-0 invert opacity-50"
+              />
+            </div>
+          </div>
         </div>
       </footer>
     </>
