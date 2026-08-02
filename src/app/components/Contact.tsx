@@ -7,8 +7,8 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-import { Section } from "@/components/layout/Section";
-import { Container } from "@/components/layout/Container";
+import { Section } from "@./ui/Section";
+import { Container } from "@./ui/Container";
 
 
 const LOGO =

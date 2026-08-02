@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
-import { Container } from "@/components/layout/Container";
+import { Container } from "@./ui/Container";
 
 const SENA =
   "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/sena-seeklogo.png";

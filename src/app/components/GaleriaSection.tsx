@@ -14,7 +14,7 @@ import {
   type Categoria,
 } from "../../lib/supabase";
 
-import { Container } from "@/components/layout/Container";
+import { Container } from "@./ui/Container";
 
 
 
