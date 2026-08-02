@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
+import { Container } from "@/components/layout/Container";
 
 const SENA =
   "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/sena-seeklogo.png";
@@ -10,198 +11,229 @@ const FONDO =
 const BG =
   "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/IMG-20260608-WA0066.jpg";
 
+
 export function Hero() {
-  const goTo = (href: string) =>
+
+  const goTo = (href:string) =>
     document.querySelector(href)?.scrollIntoView({
-      behavior: "smooth",
+      behavior:"smooth"
     });
+
 
   return (
     <section
       id="inicio"
-      className="relative flex items-end overflow-hidden"
-      style={{
-        minHeight: "700px",
-        height: "100svh",
-      }}
+      className="relative flex min-h-[700px] h-[100svh] items-end overflow-hidden"
     >
-      {/* Background */}
+
+      {/* Imagen fondo */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${BG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
+          backgroundImage:`url(${BG})`
         }}
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/20" />
 
-      {/* Content */}
-      <div
-        className="relative z-10 mx-auto w-full max-w-[1440px]"
-        style={{
-          paddingInline: "clamp(24px,6vw,96px)",
-          paddingBottom: "clamp(56px,10vh,120px)",
-        }}
+      {/* Capa oscura */}
+      <div className="
+        absolute inset-0 
+        bg-gradient-to-t 
+        from-black/80 
+        via-black/35 
+        to-black/20
+      "/>
+
+
+      <Container
+        className="
+          relative z-10
+          pb-[clamp(56px,10vh,120px)]
+        "
       >
-        {/* Ubicación */}
+
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="uppercase text-white/70"
-          style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: "clamp(.75rem,.8vw,.95rem)",
-            letterSpacing: ".35em",
-            marginBottom: "clamp(20px,2vh,32px)",
-          }}
+          initial={{opacity:0,y:18}}
+          animate={{opacity:1,y:0}}
+          transition={{duration:.6}}
+          className="
+            uppercase 
+            text-white/70
+            tracking-[.35em]
+            text-[clamp(.75rem,.8vw,.95rem)]
+            mb-[clamp(20px,2vh,32px)]
+          "
         >
           Campo de la Cruz · Atlántico · Colombia
         </motion.p>
 
-        {/* Título */}
+
+
         <motion.h1
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{opacity:0,y:28}}
+          animate={{opacity:1,y:0}}
           transition={{
-            duration: 0.8,
-            ease: [0.22, 1, 0.36, 1],
+            duration:.8,
+            ease:[0.22,1,0.36,1]
           }}
-          className="text-white"
+          className="
+            text-white
+            font-bold
+            max-w-[11ch]
+            text-[clamp(3.5rem,7vw,7rem)]
+            leading-[.95]
+            tracking-[-.03em]
+          "
           style={{
-            fontFamily: "'Lora', serif",
-            fontWeight: 700,
-            fontSize: "clamp(3.5rem,7vw,7rem)",
-            lineHeight: 0.95,
-            letterSpacing: "-0.03em",
-            maxWidth: "11ch",
+            fontFamily:"Lora, serif"
           }}
         >
           Hacienda
-          <br />
+          <br/>
           Maria Jose
         </motion.h1>
 
-        {/* Descripción */}
+
+
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: .2 }}
-          className="text-white/80"
-          style={{
-            marginTop: "clamp(24px,3vh,40px)",
-            maxWidth: "clamp(320px,42vw,620px)",
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: "clamp(1rem,1.2vw,1.25rem)",
-            lineHeight: 1.8,
-          }}
+          initial={{opacity:0,y:18}}
+          animate={{opacity:1,y:0}}
+          transition={{delay:.2}}
+          className="
+            mt-[clamp(24px,3vh,40px)]
+            max-w-[clamp(320px,42vw,620px)]
+            text-white/80
+            text-[clamp(1rem,1.2vw,1.25rem)]
+            leading-[1.8]
+          "
         >
           Leche fresca y queso artesanal.
-          <br />
+          <br/>
           Del campo a tus manos, sin intermediarios.
         </motion.p>
 
-        {/* Botones */}
+
+
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: .35 }}
-          className="flex flex-wrap gap-4"
-          style={{
-            marginTop: "clamp(32px,4vh,48px)",
-          }}
+          initial={{opacity:0,y:16}}
+          animate={{opacity:1,y:0}}
+          transition={{delay:.35}}
+          className="
+            flex flex-wrap gap-4
+            mt-[clamp(32px,4vh,48px)]
+          "
         >
+
           <button
-            onClick={() => goTo("#nosotros")}
-            className="rounded-full bg-white text-[#1A1208] transition hover:bg-[#F6F1E8]"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              padding: "clamp(12px,1vw,16px) clamp(24px,2vw,34px)",
-              fontSize: "clamp(.9rem,.9vw,1rem)",
-            }}
+            onClick={()=>goTo("#nosotros")}
+            className="
+              rounded-full
+              bg-white
+              px-[clamp(24px,2vw,34px)]
+              py-[clamp(12px,1vw,16px)]
+              text-[#1A1208]
+              hover:bg-[#F6F1E8]
+            "
           >
             Conocer la Hacienda
           </button>
 
+
           <button
-            onClick={() => goTo("#contacto")}
-            className="rounded-full border border-white/40 text-white transition hover:bg-white/10"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              padding: "clamp(12px,1vw,16px) clamp(24px,2vw,34px)",
-              fontSize: "clamp(.9rem,.9vw,1rem)",
-            }}
+            onClick={()=>goTo("#contacto")}
+            className="
+              rounded-full
+              border
+              border-white/40
+              text-white
+              px-[clamp(24px,2vw,34px)]
+              py-[clamp(12px,1vw,16px)]
+              hover:bg-white/10
+            "
           >
             Escríbenos
           </button>
+
         </motion.div>
 
-        {/* Logos */}
+
+
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: .55 }}
-          className="flex items-center gap-6"
-          style={{
-            marginTop: "clamp(48px,6vh,80px)",
-          }}
+          initial={{opacity:0}}
+          animate={{opacity:1}}
+          transition={{delay:.55}}
+          className="
+            flex items-center gap-6
+            mt-[clamp(48px,6vh,80px)]
+          "
         >
-          <p
-            className="uppercase text-white/45"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              letterSpacing: ".3em",
-              fontSize: "clamp(.65rem,.7vw,.8rem)",
-            }}
-          >
+
+          <p className="
+            uppercase
+            text-white/45
+            tracking-[.3em]
+            text-[clamp(.65rem,.7vw,.8rem)]
+          ">
             Con el apoyo de
           </p>
 
+
           <div className="flex items-center gap-5">
+
             <img
               src={SENA}
               alt="SENA"
-              style={{
-                height: "clamp(24px,2vw,34px)",
-              }}
-              className="brightness-0 invert opacity-50"
+              className="
+                brightness-0 invert
+                opacity-50
+                h-[clamp(24px,2vw,34px)]
+              "
             />
 
-            <div className="w-px h-5 bg-white/20" />
+
+            <div className="h-5 w-px bg-white/20"/>
+
 
             <img
               src={FONDO}
               alt="Fondo Emprender"
-              style={{
-                height: "clamp(24px,2vw,34px)",
-              }}
-              className="brightness-0 invert opacity-50"
+              className="
+                brightness-0 invert
+                opacity-50
+                h-[clamp(24px,2vw,34px)]
+              "
             />
-          </div>
-        </motion.div>
-      </div>
 
-      {/* Flecha */}
+          </div>
+
+        </motion.div>
+
+
+      </Container>
+
+
+
       <motion.button
-        onClick={() => goTo("#nosotros")}
-        animate={{ y: [0, 8, 0] }}
+        onClick={()=>goTo("#nosotros")}
+        animate={{
+          y:[0,8,0]
+        }}
         transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
+          duration:2,
+          repeat:Infinity
         }}
-        className="absolute z-20 text-white/50 transition hover:text-white"
-        style={{
-          right: "clamp(24px,4vw,48px)",
-          bottom: "clamp(24px,4vh,48px)",
-        }}
+        className="
+          absolute
+          right-[clamp(24px,4vw,48px)]
+          bottom-[clamp(24px,4vh,48px)]
+          text-white/50
+          hover:text-white
+        "
       >
-        <ArrowDown size={22} />
+        <ArrowDown size={22}/>
       </motion.button>
+
+
     </section>
   );
 }
