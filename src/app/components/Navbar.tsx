@@ -1,98 +1,147 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router";
 
-const links = [
-  { label: "Inicio", href: "#inicio" },
+const LOGO = "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/Logo_FincaMJ.svg";
+
+const mainLinks = [
   { label: "Nosotros", href: "#nosotros" },
-  { label: "Productos", href: "#productos" },
-  { label: "Galería", href: "#galeria" },
+  { label: "Lo que Hacemos", href: "#hacemos" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isGaleria = location.pathname === "/galeria";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleLink = (href: string) => {
+  // En páginas internas siempre mostrar fondo
+  const showBg = scrolled || isGaleria;
+
+  const goTo = (href: string) => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (isGaleria) {
+      // Navegar primero a home, luego hacer scroll
+      navigate("/");
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <motion.nav
-      initial={{ y: -80, opacity: 0 }}
+    <motion.header
+      initial={{ y: -70, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-[#faf7f0]/95 shadow-md backdrop-blur-sm" : "bg-transparent"
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        showBg
+          ? "bg-[#f6f1e8]/95 backdrop-blur-md border-b border-black/8 shadow-sm"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
-        <button onClick={() => handleLink("#inicio")} className="flex items-center gap-3 group">
-          <img src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/Logo_FincaMJ.svg" alt="Logo Hacienda Maria Jose" className="w-10 h-10 rounded-full bg-white p-2 shadow-lg" />
-          <div className="text-left">
-            <p className={`leading-none tracking-wide transition-colors ${scrolled ? "text-[#2c1f0e]" : "text-white"}`}
-               style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.1rem", fontWeight: 600 }}>
-              Hacienda Maria Jose
-            </p>
-            <p className={`text-xs tracking-widest uppercase transition-colors ${scrolled ? "text-[#7a6b52]" : "text-white/80"}`}>
-              Quesos y Leche de Finca
-            </p>
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={LOGO}
+            alt="Hacienda Maria Jose"
+            className={`h-9 w-9 object-contain rounded-full p-1 ${showBg ? "bg-[#1a1208]/5" : "bg-white/15"}`}
+          />
+          <div
+            className={`hidden sm:block transition-colors ${showBg ? "text-[#1a1208]" : "text-white"}`}
+            style={{ fontFamily: "Georgia, serif", letterSpacing: "0.01em" }}
+          >
+            <span style={{ fontWeight: 700, fontSize: "0.95rem" }}>Hacienda</span>
+            <span style={{ fontWeight: 400, fontSize: "0.95rem", marginLeft: "0.3em" }}>Maria Jose</span>
           </div>
-        </button>
+        </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <li key={link.href}>
-              <button
-                onClick={() => handleLink(link.href)}
-                className={`text-sm tracking-wide transition-colors hover:text-[#3a5e2f] ${
-                  scrolled ? "text-[#2c1f0e]" : "text-white/90"
-                }`}
-              >
-                {link.label}
-              </button>
-            </li>
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-7">
+          {mainLinks.map((l) => (
+            <button
+              key={l.href}
+              onClick={() => goTo(l.href)}
+              className={`text-sm tracking-wide transition-colors hover:opacity-60 ${
+                showBg ? "text-[#1a1208]" : "text-white/90"
+              }`}
+            >
+              {l.label}
+            </button>
           ))}
-        </ul>
+          <Link
+            to="/galeria"
+            className={`text-sm tracking-wide transition-colors hover:opacity-60 ${
+              showBg ? "text-[#1a1208]" : "text-white/90"
+            } ${isGaleria ? "opacity-40 pointer-events-none" : ""}`}
+          >
+            Galería
+          </Link>
+          <button
+            onClick={() => goTo("#contacto")}
+            className={`text-sm px-5 py-2 rounded-full border transition-all hover:opacity-70 ${
+              showBg
+                ? "border-[#1a1208] text-[#1a1208]"
+                : "border-white/60 text-white"
+            }`}
+          >
+            Escríbenos
+          </button>
+        </nav>
 
-        {/* Mobile menu toggle */}
+        {/* Mobile toggle */}
         <button
-          className={`md:hidden transition-colors ${scrolled ? "text-[#2c1f0e]" : "text-white"}`}
           onClick={() => setMenuOpen((v) => !v)}
+          className={`md:hidden transition-colors ${showBg ? "text-[#1a1208]" : "text-white"}`}
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — sin animación de height para que los clicks funcionen */}
       {menuOpen && (
-        <div className="md:hidden bg-[#faf7f0] shadow-lg border-t border-[#e8dfc8]">
-          <ul className="flex flex-col px-6 pb-6 pt-2">
-            {links.map((link) => (
-              <li key={link.href}>
-                <button
-                  onClick={() => handleLink(link.href)}
-                  className="w-full text-left py-4 border-b border-[#e8dfc8] text-[#2c1f0e] text-base active:bg-[#f0ebe0]"
-                  style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 500 }}
-                >
-                  {link.label}
-                </button>
-              </li>
+        <div className="md:hidden bg-[#f6f1e8] border-t border-black/8">
+          <nav className="px-6 py-4 flex flex-col gap-1">
+            {mainLinks.map((l) => (
+              <button
+                key={l.href}
+                onClick={() => goTo(l.href)}
+                className="text-left py-3.5 text-[#1a1208] border-b border-black/6 text-base"
+                style={{ fontFamily: "Georgia, serif" }}
+              >
+                {l.label}
+              </button>
             ))}
-          </ul>
+            <Link
+              to="/galeria"
+              onClick={() => setMenuOpen(false)}
+              className="py-3.5 text-[#1a1208] border-b border-black/6 text-base"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              Galería
+            </Link>
+            <button
+              onClick={() => goTo("#contacto")}
+              className="mt-3 py-3 rounded-full bg-[#1a1208] text-[#f6f1e8] text-center text-sm"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              Escríbenos
+            </button>
+          </nav>
         </div>
       )}
-    </motion.nav>
+    </motion.header>
   );
 }

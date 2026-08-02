@@ -1,5 +1,24 @@
+# Dependencias
 node_modules/
-dist/
+
+# Variables de entorno
 .env
 .env.local
-pnpm-lock.yaml
+.env.production
+
+# Build
+dist/
+
+# Locks (dejar solo el de pnpm)
+package-lock.json
+yarn.lock
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+supabase_galeria.sql

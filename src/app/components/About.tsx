@@ -1,20 +1,20 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Heart, ShieldCheck, HandHeart } from "lucide-react";
 
-const values = [
+const IMG_BIG = "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/IMG-20260608-WA0064.jpg";
+const SENA = "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/sena-seeklogo.png";
+const FONDO = "https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/logo/fondo-emprender-sena-seeklogo.png";
+
+const pillars = [
   {
-    icon: <Heart size={22} />,
     title: "Trabajo Familiar",
     desc: "La finca la llevamos entre todos. El ordeño, el queso, la distribución — cada paso lo hacemos nosotros mismos, con dedicación diaria.",
   },
   {
-    icon: <HandHeart size={22} />,
     title: "Leche Fresca del Día",
     desc: "Recogemos la leche cada mañana directamente de nuestro ganado. Sin intermediarios, sin días de espera. Fresca de origen.",
   },
   {
-    icon: <ShieldCheck size={22} />,
     title: "Queso Artesanal",
     desc: "Elaboramos nuestro queso a mano, con recetas propias y cuidado en cada etapa. El resultado habla por sí solo.",
   },
@@ -22,124 +22,143 @@ const values = [
 
 export function About() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="nosotros" className="py-24 bg-[#faf7f0]" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+    <section id="nosotros" className="bg-[#f6f1e8]" ref={ref}>
+      {/* Top: full-bleed image */}
+      <div className="relative h-[55vh] min-h-[380px] overflow-hidden">
+        <img
+          src={IMG_BIG}
+          alt="Hacienda Maria Jose"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/10" />
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          initial={{ opacity: 0, x: -30 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0 flex items-center"
         >
-          <span className="text-[#3a5e2f] text-xs tracking-widest uppercase"
-            style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 700 }}>
-            Nuestra Historia
-          </span>
-          <h2 className="text-[#2c1f0e] mt-3" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 600 }}>
-            Una Finca con Alma
-          </h2>
+          <div className="max-w-6xl mx-auto w-full px-6 md:px-10">
+            <p
+              className="text-white max-w-xl"
+              style={{
+                fontFamily: "Georgia, serif",
+                fontSize: "clamp(1.3rem, 3vw, 2rem)",
+                lineHeight: 1.55,
+                fontStyle: "italic",
+              }}
+            >
+              "Aquí la jornada empieza antes del amanecer — con el ordeño, el
+              cuidado del ganado y el trabajo silencioso que hace posible todo lo
+              que ponemos en tus manos."
+            </p>
+          </div>
         </motion.div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
-          {/* Image stack */}
+      {/* Main content */}
+      <div className="max-w-6xl mx-auto px-6 md:px-10 py-20 md:py-28">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+          {/* Left */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="relative"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.75, delay: 0.1 }}
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
-              <img
-                src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/IMG-20260608-WA0064.jpg"
-                alt="Vista principal de la finca"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Floating badge */}
-            <motion.div
-              animate={{ y: [-4, 4, -4] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-6 z-20 bg-[#fff8ee] rounded-2xl shadow-xl p-5 border border-[#e8dfc8]"
+            <span className="text-[#b87c2a] text-xs tracking-widest uppercase"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              Quiénes Somos
+            </span>
+            <h2
+              className="text-[#1a1208] mt-3 mb-6"
+              style={{
+                fontFamily: "Georgia, serif",
+                fontSize: "clamp(1.7rem, 3.5vw, 2.6rem)",
+                lineHeight: 1.2,
+              }}
             >
-              <p className="text-[#3a5e2f]" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: "1.5rem", fontWeight: 700 }}>
-                Campo de la Cruz
+              Una familia que trabaja<br />su tierra.
+            </h2>
+            <div className="space-y-5 text-[#6b5840]"
+              style={{ lineHeight: 1.85, fontSize: "1.02rem", fontFamily: "'DM Sans', sans-serif" }}>
+              <p>
+                Hacienda Maria Jose está en Campo de la Cruz, Atlántico. No somos
+                una empresa grande ni una marca de diseño. Somos una familia que
+                trabaja su tierra, cuida sus vacas y elabora queso artesanal con
+                el mismo proceso de siempre.
               </p>
-              <p className="text-[#7a6b52] text-sm mt-1" style={{ fontFamily: "'Nunito', sans-serif" }}>Atlántico · Producción familiar</p>
-            </motion.div>
-            {/* Small accent image */}
-            <div className="absolute -top-6 -left-6 w-32 h-32 rounded-xl overflow-hidden shadow-lg border-4 border-[#faf7f0] z-20">
-              <img
-                src="https://nwopkcvdgbwomplkfwdx.supabase.co/storage/v1/object/public/media/photos/4987818660302883932.jpg"
-                alt="Detalle de la finca"
-                className="w-full h-full object-cover"
-              />
+              <p>
+                Con el respaldo del Fondo Emprender del SENA, hemos podido
+                fortalecer nuestra producción y llevar nuestros productos a más
+                familias de la región.
+              </p>
+            </div>
+
+            <div className="mt-10 pt-10 border-t border-black/10">
+              <div className="flex gap-10 flex-wrap mb-8">
+                {[
+                  { value: "Campo de la Cruz", label: "Atlántico" },
+                  { value: "Familiar", label: "100% artesanal" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <p className="text-[#1a1208]"
+                      style={{ fontFamily: "Georgia, serif", fontSize: "1.15rem", fontWeight: 700 }}>
+                      {s.value}
+                    </p>
+                    <p className="text-[#6b5840] text-sm mt-0.5"
+                      style={{ fontFamily: "'DM Sans', sans-serif" }}>{s.label}</p>
+                  </div>
+                ))}
+              </div>
+              {/* Logos Sena / Fondo Emprender */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-[#6b5840] text-xs mr-2"
+                  style={{ fontFamily: "'DM Sans', sans-serif" }}>Con el apoyo de</span>
+                <img src={SENA} alt="SENA" className="h-7 object-contain opacity-60" />
+                <div className="w-px h-4 bg-black/15 mx-1" />
+                <img src={FONDO} alt="Fondo Emprender" className="h-7 object-contain opacity-60" />
+              </div>
             </div>
           </motion.div>
 
-          {/* Text */}
+          {/* Right: pillars */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.75, delay: 0.25 }}
+            className="divide-y divide-black/8"
           >
-            <p
-              className="text-[#7a6b52] mb-6"
-              style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1.05rem", lineHeight: 1.85, fontWeight: 300 }}
-            >
-              Hacienda Maria Jose está en Campo de la Cruz, Atlántico. Aquí la jornada
-              empieza antes del amanecer — con el ordeño, el cuidado del ganado y el
-              trabajo silencioso que hace posible todo lo que ponemos en tus manos.
-            </p>
-            <p
-              className="text-[#7a6b52] mb-8"
-              style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1.05rem", lineHeight: 1.85, fontWeight: 300 }}
-            >
-              No somos una empresa grande ni una marca de diseño. Somos una familia que
-              trabaja su tierra, cuida sus vacas y elabora queso artesanal con el mismo
-              proceso de siempre — con paciencia, manos propias y sabor verdadero.
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <div className="px-5 py-3 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] text-sm"
-                style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
-                Queso artesanal
-              </div>
-              <div className="px-5 py-3 rounded-full bg-[#c8a96e]/15 text-[#7a6b52] text-sm"
-                style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
-                Leche fresca de finca
-              </div>
-              <div className="px-5 py-3 rounded-full bg-[#e8dfc8] text-[#5a4a32] text-sm"
-                style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
-                Campo de la Cruz, Atlántico
-              </div>
-            </div>
+            {pillars.map((p, i) => (
+              <motion.div
+                key={p.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.55, delay: 0.35 + i * 0.12 }}
+                className="py-8 first:pt-0 last:pb-0"
+              >
+                <div className="flex items-start gap-5">
+                  <span
+                    className="text-[#b87c2a] shrink-0 mt-0.5"
+                    style={{ fontFamily: "Georgia, serif", fontSize: "1.4rem", fontWeight: 700, lineHeight: 1 }}
+                  >
+                    0{i + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-[#1a1208] mb-2"
+                      style={{ fontFamily: "Georgia, serif", fontSize: "1.1rem" }}>
+                      {p.title}
+                    </h3>
+                    <p className="text-[#6b5840] text-sm"
+                      style={{ lineHeight: 1.8, fontFamily: "'DM Sans', sans-serif" }}>
+                      {p.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
-        </div>
-
-        {/* Values grid — 3 items centered */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {values.map((v, i) => (
-            <motion.div
-              key={v.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + i * 0.12 }}
-              className="bg-[#fff8ee] rounded-2xl p-6 border border-[#e8dfc8] hover:shadow-md transition-shadow"
-              style={{ width: "clamp(260px, 30%, 340px)" }}
-            >
-              <div className="w-10 h-10 rounded-full bg-[#3a5e2f]/10 text-[#3a5e2f] flex items-center justify-center mb-4">
-                {v.icon}
-              </div>
-              <h3 className="text-[#2c1f0e] mb-2" style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.1rem" }}>
-                {v.title}
-              </h3>
-              <p className="text-[#7a6b52] text-sm" style={{ fontFamily: "'Nunito', sans-serif", lineHeight: 1.75, fontWeight: 300 }}>
-                {v.desc}
-              </p>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
