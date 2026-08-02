@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router";
-import { Container } from "@./ui/Container";
+import { Container } from "./ui/Container";
 
 
 const LOGO =

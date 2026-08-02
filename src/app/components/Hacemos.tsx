@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { Section } from "@./ui/Section";
-import { Container } from "@./ui/Container";
+import { Section } from "./ui/Section";
+import { Container } from "./ui/Container";
 
 
 const IMG_LECHE =

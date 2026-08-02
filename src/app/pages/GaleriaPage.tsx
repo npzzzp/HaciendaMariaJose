@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { ArrowLeft } from "lucide-react";
 
 import { GaleriaSection } from "../components/GaleriaSection";
-import { Container } from "@./ui/Container";
+import { Container } from "./ui/Container";
 
 
 
