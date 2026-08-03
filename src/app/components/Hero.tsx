@@ -14,50 +14,76 @@ const BG =
 
 export function Hero() {
 
-  const goTo = (href:string) =>
+  const goTo = (href: string) =>
     document.querySelector(href)?.scrollIntoView({
-      behavior:"smooth"
+      behavior: "smooth",
     });
 
 
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[700px] h-[100svh] items-end overflow-hidden"
+      className="
+        relative
+        flex
+        min-h-[700px]
+        h-[100svh]
+        items-end
+        overflow-hidden
+      "
     >
 
       {/* Imagen fondo */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="
+          absolute
+          inset-0
+          bg-cover
+          bg-center
+        "
         style={{
-          backgroundImage:`url(${BG})`
+          backgroundImage: `url(${BG})`,
         }}
       />
 
 
-      {/* Capa oscura */}
-      <div className="
-        absolute inset-0 
-        bg-gradient-to-t 
-        from-black/80 
-        via-black/35 
-        to-black/20
-      "/>
+      {/* Overlay */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black/80
+          via-black/35
+          to-black/20
+        "
+      />
 
 
+      {/* Contenido */}
       <Container
         className="
-          relative z-10
+          relative
+          z-10
           pb-[clamp(56px,10vh,120px)]
         "
       >
 
+        {/* Ubicación */}
         <motion.p
-          initial={{opacity:0,y:18}}
-          animate={{opacity:1,y:0}}
-          transition={{duration:.6}}
+          initial={{
+            opacity: 0,
+            y: 18,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: .6,
+          }}
           className="
-            uppercase 
+            uppercase
             text-white/70
             tracking-[.35em]
             text-[clamp(.75rem,.8vw,.95rem)]
@@ -69,12 +95,19 @@ export function Hero() {
 
 
 
+        {/* Título */}
         <motion.h1
-          initial={{opacity:0,y:28}}
-          animate={{opacity:1,y:0}}
+          initial={{
+            opacity: 0,
+            y: 28,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
           transition={{
-            duration:.8,
-            ease:[0.22,1,0.36,1]
+            duration: .8,
+            ease: [0.22,1,0.36,1],
           }}
           className="
             text-white
@@ -85,20 +118,29 @@ export function Hero() {
             tracking-[-.03em]
           "
           style={{
-            fontFamily:"Lora, serif"
+            fontFamily: "Lora, serif",
           }}
         >
           Hacienda
-          <br/>
+          <br />
           Maria Jose
         </motion.h1>
 
 
 
+        {/* Descripción */}
         <motion.p
-          initial={{opacity:0,y:18}}
-          animate={{opacity:1,y:0}}
-          transition={{delay:.2}}
+          initial={{
+            opacity:0,
+            y:18,
+          }}
+          animate={{
+            opacity:1,
+            y:0,
+          }}
+          transition={{
+            delay:.2,
+          }}
           className="
             mt-[clamp(24px,3vh,40px)]
             max-w-[clamp(320px,42vw,620px)]
@@ -108,31 +150,43 @@ export function Hero() {
           "
         >
           Leche fresca y queso artesanal.
-          <br/>
+          <br />
           Del campo a tus manos, sin intermediarios.
         </motion.p>
 
 
 
+        {/* Botones */}
         <motion.div
-          initial={{opacity:0,y:16}}
-          animate={{opacity:1,y:0}}
-          transition={{delay:.35}}
+          initial={{
+            opacity:0,
+            y:16,
+          }}
+          animate={{
+            opacity:1,
+            y:0,
+          }}
+          transition={{
+            delay:.35,
+          }}
           className="
-            flex flex-wrap gap-4
+            flex
+            flex-wrap
+            gap-4
             mt-[clamp(32px,4vh,48px)]
           "
         >
 
           <button
-            onClick={()=>goTo("#nosotros")}
+            onClick={() => goTo("#nosotros")}
             className="
               rounded-full
               bg-white
+              text-[#1A1208]
               px-[clamp(24px,2vw,34px)]
               py-[clamp(12px,1vw,16px)]
-              text-[#1A1208]
               hover:bg-[#F6F1E8]
+              transition
             "
           >
             Conocer la Hacienda
@@ -140,7 +194,7 @@ export function Hero() {
 
 
           <button
-            onClick={()=>goTo("#contacto")}
+            onClick={() => goTo("#contacto")}
             className="
               rounded-full
               border
@@ -149,6 +203,7 @@ export function Hero() {
               px-[clamp(24px,2vw,34px)]
               py-[clamp(12px,1vw,16px)]
               hover:bg-white/10
+              transition
             "
           >
             Escríbenos
@@ -158,50 +213,74 @@ export function Hero() {
 
 
 
+        {/* Logos de apoyo */}
         <motion.div
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{delay:.55}}
+          initial={{
+            opacity:0,
+          }}
+          animate={{
+            opacity:1,
+          }}
+          transition={{
+            delay:.55,
+          }}
           className="
-            flex items-center gap-6
+            flex
+            justify-center
+            items-center
+            w-full
             mt-[clamp(48px,6vh,80px)]
           "
         >
 
-          <p className="
-            uppercase
-            text-white/45
-            tracking-[.3em]
-            text-[clamp(.65rem,.7vw,.8rem)]
-          ">
-            Con el apoyo de
-          </p>
+          <div
+            className="
+              flex
+              items-center
+              gap-8
+            "
+          >
 
+            <p
+              className="
+                uppercase
+                text-white/60
+                tracking-[.25em]
+                text-[clamp(.65rem,.7vw,.8rem)]
+              "
+            >
+              Con el apoyo de
+            </p>
 
-          <div className="flex items-center gap-5">
 
             <img
               src={SENA}
               alt="SENA"
-              className="
-                brightness-0 invert
-                opacity-50
-                h-[clamp(24px,2vw,34px)]
-              "
+              className="object-contain"
+              style={{
+                height:"clamp(42px,3.5vw,58px)",
+              }}
             />
 
 
-            <div className="h-5 w-px bg-white/20"/>
+            <div
+              className="
+                w-px
+                bg-white/30
+              "
+              style={{
+                height:"38px",
+              }}
+            />
 
 
             <img
               src={FONDO}
               alt="Fondo Emprender"
-              className="
-                brightness-0 invert
-                opacity-50
-                h-[clamp(24px,2vw,34px)]
-              "
+              className="object-contain"
+              style={{
+                height:"clamp(42px,3.5vw,58px)",
+              }}
             />
 
           </div>
@@ -213,14 +292,16 @@ export function Hero() {
 
 
 
+      {/* Flecha */}
       <motion.button
-        onClick={()=>goTo("#nosotros")}
+        onClick={() => goTo("#nosotros")}
         animate={{
-          y:[0,8,0]
+          y:[0,8,0],
         }}
         transition={{
           duration:2,
-          repeat:Infinity
+          repeat:Infinity,
+          ease:"easeInOut",
         }}
         className="
           absolute
@@ -228,6 +309,7 @@ export function Hero() {
           bottom-[clamp(24px,4vh,48px)]
           text-white/50
           hover:text-white
+          transition
         "
       >
         <ArrowDown size={22}/>
